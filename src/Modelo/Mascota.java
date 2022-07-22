@@ -3,11 +3,14 @@ package Modelo;
 import java.util.Date;
 
 public class Mascota {
-    private String codigo;
-    private String nombre;
-    private String colorPelo;
-    private Date fechaNacimiento;
+    protected String codigo;
+    protected String nombre;
+    protected String colorPelo;
+    protected Date fechaNacimiento;
 
+    public Mascota(){
+    }
+    
     public Mascota(String codigo, String nombre, Date fechaNacimiento) {
         this.codigo = codigo;
         this.nombre = nombre;
