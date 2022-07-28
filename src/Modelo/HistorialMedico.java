@@ -3,6 +3,7 @@ package Modelo;
 
 
 public class HistorialMedico {
+    /*
     private Citas[] citas;//arreglo de citas
     private int indice;
 
@@ -24,4 +25,12 @@ public class HistorialMedico {
         }
         return resultado;
     }
+    */
+    
+    private Citas[] citas;//arreglo de citas
+    private int indice;
+    
+    //agregar citas
+    //mostrar citas de un paciente
+    
 }

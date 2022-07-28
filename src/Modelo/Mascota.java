@@ -17,7 +17,7 @@ public class Mascota {
         this.fechaNacimiento = fechaNacimiento;
     }
     
-    public void llenarCita (String codigo, String nombre, String colorPelo, Date fechaNacimiento){
-        
-    }
+    //añadir metodos(añadir, eliminar, ) o busquen p
+    //validar codigo que sea numero o que se aumente automticamente
+    
 }
