@@ -11,15 +11,15 @@ package Modelo;
  */
 public class Usuario {
     
-    //Cambien las variables 
+    //Cambien las variables     
     private String Usuario;
-    private String clave;
-    private boolean activo;
+    private String Clave;
+    private boolean Estado;
 
-    public Usuario(String Usuario, String clave) {
+    public Usuario(String Usuario, String Clave) {
         this.Usuario = Usuario;
-        this.clave = clave;
-        this.activo = false;
+        this.Clave = Clave;
+        this.Estado = false;
     }
 
     public String getUsuario() {
@@ -27,25 +27,24 @@ public class Usuario {
     }
 
     public boolean isActivo() {
-        return activo;
+        return Estado;
     }
 
-    public boolean ingresar(String Usuario, String clave){
+    public boolean ingresar(String user, String password){
         boolean result = false;
-        if( this.Usuario.equalsIgnoreCase(Usuario) && 
-                this.clave.equals(clave)&&
+        if( this.Usuario.equalsIgnoreCase(user) && 
+                this.Clave.equals(password)&&
                 !isActivo() ){
-            this.activo = true;
+            this.Estado = true;
             result = true;
-        }
-            
+        }            
         return result; 
     }
     
     public boolean salir(){
         boolean result = false;
-        if(this.activo){
-            this.activo = false;
+        if(this.Estado){
+            this.Estado = false;
             result = true;
         }
         return result;
