@@ -11,9 +11,7 @@ public class Mascota {
     public Mascota(String codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;
-    }
-
-    
+    } 
     
     public Mascota(String codigo, String nombre, Date fechaNacimiento) {
         this.codigo = codigo;
@@ -34,4 +32,15 @@ public class Mascota {
         this.nombre = nombre;
     }
     
+    public void agregarMascota(String codigo, String nombre){
+        
+    }
+    
+    public void eliminarMascota(String codigo, String nombre){
+        
+    }
+    
+    public void llenarCita(){
+        
+    }
 }
