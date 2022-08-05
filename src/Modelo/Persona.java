@@ -6,12 +6,12 @@ public abstract class Persona {
     protected String nombre;
     protected String apellido;
     protected String DNI;
-    protected long telefono;
+    protected int telefono;
     
     
     //constructor, get ,set, validar que no estee vacio
 
-    public Persona(String nombre, String apellido, String DNI, int telefono, int codigo) {
+    public Persona(String nombre, String apellido, String DNI, int telefono) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.DNI = DNI;

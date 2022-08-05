@@ -8,7 +8,7 @@ public class Pago {
     private String numTarjeta;
     
     private ClientePersona client;
-    private Empleado 
+    private Empleado empleado; 
     //metodos
     //HallarPrecioTotal
     //verificar si es con tarjeta o efectivo

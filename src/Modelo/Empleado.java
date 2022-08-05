@@ -14,12 +14,21 @@ public class Empleado extends Persona {
     private int codigo;
     private float sueldo;
 
-  
-    public Empleado(float sueldo, int codigo, String DNI, String nombre, String especialidad) {
+    
+    public Empleado(String especialidad, int codigo, float sueldo, String nombre, String apellido, String DNI, int telefono) {
+        super(nombre, apellido, DNI, telefono);
+        this.especialidad = especialidad;
+        this.codigo = codigo;
+        this.sueldo = sueldo;
+    }
+
+    
+    
+    /*public Empleado(float sueldo, int codigo, String DNI, String nombre, String especialidad) {
         this.especialidad= especialidad;
         this.sueldo = sueldo;
         this.codigo = codigo;        
-    }
+    }/*/
 
     public String getEspecialidad() {
         return especialidad;
@@ -44,6 +53,8 @@ public class Empleado extends Persona {
     public void setSueldo(float sueldo) {
         this.sueldo = sueldo;
     }
+    
+    @Override
     public void validar(){
         
     }
