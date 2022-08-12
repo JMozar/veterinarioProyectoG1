@@ -28,18 +28,45 @@ public class frmMascota extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lblFechaNacimientoMascota = new javax.swing.JTextField();
+        lblNombreMascota = new javax.swing.JTextField();
+        lblEspecieMascota = new javax.swing.JTextField();
+        lblRazaMascota = new javax.swing.JTextField();
+        lblColorMascota = new javax.swing.JTextField();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 666, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 451, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Registro de Mascota", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Nombre:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 80, -1));
+
+        jLabel2.setText("Especie: ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jLabel3.setText("Raza:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+
+        jLabel4.setText("Color:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        jLabel5.setText("Fecha de Nacimiento:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        jPanel1.add(lblFechaNacimientoMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 130, -1));
+        jPanel1.add(lblNombreMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 130, -1));
+        jPanel1.add(lblEspecieMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 130, -1));
+        jPanel1.add(lblRazaMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 130, -1));
+        jPanel1.add(lblColorMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 130, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, 260));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,5 +107,16 @@ public class frmMascota extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField lblColorMascota;
+    private javax.swing.JTextField lblEspecieMascota;
+    private javax.swing.JTextField lblFechaNacimientoMascota;
+    private javax.swing.JTextField lblNombreMascota;
+    private javax.swing.JTextField lblRazaMascota;
     // End of variables declaration//GEN-END:variables
 }
