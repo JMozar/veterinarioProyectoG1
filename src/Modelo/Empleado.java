@@ -1,34 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Modelo;
 
-/**
- *
- * @author enzol
- */
+
 public class Empleado extends Persona {
     private String especialidad;
+    private static int contador=0;
     private int codigo;
     private float sueldo;
 
     
-    public Empleado(String especialidad, int codigo, float sueldo, String nombre, String apellido, String DNI, int telefono) {
+    public Empleado(String especialidad,float sueldo, String nombre, String apellido, String DNI, int telefono) {
         super(nombre, apellido, DNI, telefono);
+        this.codigo = contador;
+        contador++;
         this.especialidad = especialidad;
-        this.codigo = codigo;
         this.sueldo = sueldo;
     }
-
-    
-    
-    /*public Empleado(float sueldo, int codigo, String DNI, String nombre, String especialidad) {
-        this.especialidad= especialidad;
-        this.sueldo = sueldo;
-        this.codigo = codigo;        
-    }/*/
 
     public String getEspecialidad() {
         return especialidad;

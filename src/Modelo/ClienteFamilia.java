@@ -1,32 +1,31 @@
-
-
 package Modelo;
 
 public class ClienteFamilia {
-    private int codigo=0;
+    private static int contador=0;
+    private int codigo;
+    
     private String Apellido_Familia;
     private String Num_Ctab;
     private String Direccion;
     private String telefono;
-    
-    private ClientePersonaArreglo integrantesFamilia ; //una familia esta compuesta por varias personas
-    private MascotaArreglo mascotasFamilia;//los clientes tienen varias mascotas
-    
-    //constructor
 
-    public ClienteFamilia(String Apellido_Familia, String Num_Ctab, String Direccion, String telefono) {
+    private ClientePersonaArreglo integrantesFamilia; //una familia esta compuesta por varias personas
+    private MascotaArreglo mascotasFamilia;//los clientes tienen varias mascotas
+
+    //constructor
+    public ClienteFamilia(int numeroIntegrantes,int numeroMascotas, String Apellido_Familia, String Num_Ctab, String Direccion, String telefono) {
+        this.codigo=contador;
+        contador++;
         this.Apellido_Familia = Apellido_Familia;
         this.Num_Ctab = Num_Ctab;
         this.Direccion = Direccion;
         this.telefono = telefono;
-        this.integrantesFamilia = new ClientePersonaArreglo(2);
-        this.mascotasFamilia = new MascotaArreglo(3);
-        this.codigo++;
+        this.integrantesFamilia = new ClientePersonaArreglo(numeroIntegrantes);//2
+        this.mascotasFamilia = new MascotaArreglo(numeroMascotas);
+        
     }
-    
-    
-    //get y set que no dependen de otros objetos
 
+    //get y set que no dependen de otros objetos
     public int getCodigo() {
         return codigo;
     }
@@ -66,40 +65,46 @@ public class ClienteFamilia {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    //agregar Clientepersona
+
+    //Administrar INTEGRANTES de la familia
+    //Agregar integrantes
     public void AñadirPersonas(ClientePersona ClientePersona) {
-         
         this.integrantesFamilia.agregar(ClientePersona);
-        //ClientePersona.AñadirFamilias(this);//a la persona le damos a conocer la familia que le corresponde
-        System.out.println(ClientePersona.getNombre()+" añadido(a) a la familia " + Apellido_Familia);
+        System.out.println(ClientePersona.getNombre() + " añadido(a) a la familia " + Apellido_Familia);
     }
     
-    public void AñadirMascotas(Mascota mascota){
-        this.mascotasFamilia.agregar(mascota);
-        System.out.println(mascota.getNombre()+" es mascota de la familia " + Apellido_Familia);
-    }
-    
-    public void EliminarPersonaAsginada(String DNI){
-        this.integrantesFamilia.eliminar(DNI);
+    //Eliminar algun integrante de la familia
+    public void EliminarPersonaAsginada(int indice) {//indice es el numero de la persona a eliminar
+        System.out.println("Cambio en la familia "+this.Apellido_Familia+":");
+        System.out.println(integrantesFamilia.devolverArreglo()[indice].getNombre()+" eliminado");
+        integrantesFamilia.rellenarNull(indice);
         
     }
+    
+    //Administrar MASCOTAS de la familia
+    //añadir mascotas
+    public void AñadirMascotas(Mascota mascota) {
+        this.mascotasFamilia.agregar(mascota);
+        mascota.setDueño(this);//le damos a conocer a la mascota quien es su dueño
+        System.out.println(mascota.getNombre() + " es mascota de la familia " + Apellido_Familia);
+    }
+    //eliminar mascotas
+    
 
     @Override
     public String toString() {
         return "ClienteFamilia{" + "Apellido_Familia=" + Apellido_Familia + ", Num_Ctab=" + Num_Ctab + ", Direccion=" + Direccion + ", telefono=" + telefono + '}';
     }
-    
-    public void mostrarIntegrantes(){
-        System.out.println("Los integrantes de la familia "+Apellido_Familia+" son: ");
+
+    public void mostrarIntegrantes() {
+        System.out.println("Los integrantes de la familia " + Apellido_Familia + " son: ");
         System.out.println(integrantesFamilia.toString());
         //this.integrantesFamilia.toString();
     }
-    
-    public void mostrarMascotas(){
-        System.out.println("Las mascotas de la familia : "+Apellido_Familia+ "son");
+
+    public void mostrarMascotas() {
+        System.out.println("Las mascotas de la familia : " + Apellido_Familia + "son");
         System.out.println(mascotasFamilia.toString());
     }
-    
-    
+
 }

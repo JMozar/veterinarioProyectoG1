@@ -13,7 +13,6 @@ public class Pago {
     //HallarPrecioTotal
     //verificar si es con tarjeta o efectivo
     
-
     public float getMonto() {
         return monto;
     }

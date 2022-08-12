@@ -4,11 +4,25 @@ import java.util.Date;
 
 public class Especie{
     
-    private String nomRaza;
-    
-    
+    private String nombreEspecie;
 
-    //get set constructor
+    public Especie(String nombreEspecie) {
+        this.nombreEspecie = nombreEspecie;
+    }
+
+    public String getNombreEspecie() {
+        return nombreEspecie;
+    }
+
+    public void setNombreEspecie(String nombreEspecie) {
+        this.nombreEspecie = nombreEspecie;
+    }
+
+    @Override
+    public String toString() {
+        return nombreEspecie ;
+    }
+    
     
     
 }

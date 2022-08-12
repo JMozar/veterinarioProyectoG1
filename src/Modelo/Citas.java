@@ -1,69 +1,94 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Modelo;
 
 import java.util.Date;
 
-/**
- *
- * @author enzol
- */
+
 public class Citas {
-    private Date Fecha;
-    private String Diagnostico;
-    private String Tratamiento;
-    private String Vacunas; // Private Vacuna vacuna;
-    private float Peso;
-    private float Talla;
-    private String Nombre_Empleado;
-    
-    //agregar relaciones(vacuna, empleado, inyeccionVacuna) relacion 1 a 1
-    //agregar y validar peso no <0
-    //agregar y validar talla 
-    //mayor a cero y que no este vacio
-    
-    
-    public float validarPeso(float peso){
-        if(peso>0){
-            this.Peso=peso;
-        }
-        return peso;
-    }
+    //revisar lo de vacuna
+    //fecha a String
 
-    public Citas(Date Fecha, float Peso, float Talla) {
+    private static int contador=0;
+    private int codigo;
+    private String Fecha; //CAMBIAR a DATE
+    private String Diagnostico;//¿Que tiene?
+    private String Tratamiento;//Como se quita
+    private String Vacunas; // 
+
+    private Empleado empleado;
+    private Mascota mascota;
+    private ClienteFamilia familia;
+    private float registroTalla;
+    private float registroPeso;
+
+    public Citas(String Fecha, String Diagnostico, String Tratamiento, Empleado empleado, Mascota mascota, ClienteFamilia familia, float talla, float peso) {
+        this.codigo=contador;
+        contador++;
+        
         this.Fecha = Fecha;
-        this.Peso = Peso;
-        this.Talla = Talla;
+        this.Diagnostico = Diagnostico;
+        this.Tratamiento = Tratamiento;
+        this.empleado = empleado;
+        this.mascota = mascota;
+        this.familia = familia;
+        modificarPesoMascota(peso);
+        modificarTallaMascota(talla);
+        registroTalla=peso;
+        registroPeso=talla;
+        
+        
     }
 
-    public Date getFecha() {
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+
+
+    public String getFecha() {
         return Fecha;
     }
 
-    public void setFecha(Date Fecha) {
+    public void setFecha(String Fecha) {
         this.Fecha = Fecha;
     }
 
-    public float getPeso() {
-        return Peso;
+
+
+    public void identificar(String codigoP) {
+
     }
 
-    public void setPeso(float Peso) {
-        this.Peso = Peso;
-    }
-
-    public float getTalla() {
-        return Talla;
-    }
-
-    public void setTalla(float Talla) {
-        this.Talla = Talla;
-    }
-    public void identificar(String codigoP){
+    public void modificarTallaMascota(float talla) {
+        if(talla>0){
+            this.mascota.setTalla(talla);
+        }else{
+            System.out.println("Talla invalida");
+        }
         
     }
-            
+    
+    public void modificarPesoMascota(float peso){
+        if(peso>0){
+            this.mascota.setPeso(peso);
+        }else{
+            System.out.println("Peso invalido");
+        }
+        
+    }
+
+    @Override
+    public String toString() {
+        
+        return "Citas{" + "Codigo=" + codigo + ", Fecha=" + Fecha + ", \nDiagnostico=" + 
+                Diagnostico + ", \nTratamiento=" + Tratamiento + ", Vacunas=" + Vacunas + 
+                ", \nPeso=" + registroPeso + ", Talla=" + registroTalla + 
+                ", \nEmpleado=" + empleado.getNombre()+" "+empleado.getApellido() + 
+                ", Mascota=" + mascota + ", familia=" + familia +"\n"+ '}';
+    }
+    
 }

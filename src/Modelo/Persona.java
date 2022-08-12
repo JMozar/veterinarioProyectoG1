@@ -1,7 +1,7 @@
 
 package Modelo;
 
-//abstract como del profe
+//abstract 
 public abstract class Persona {
     protected String nombre;
     protected String apellido;
@@ -9,7 +9,7 @@ public abstract class Persona {
     protected int telefono;
     
     
-    //constructor, get ,set, validar que no estee vacio
+    //constructor, get ,set, 
 
     public Persona(String nombre, String apellido, String DNI, int telefono) {
         this.nombre = nombre;
@@ -18,8 +18,6 @@ public abstract class Persona {
         this.telefono = telefono;
               
     }
-    
-    //public abstract void validar(); nimbrado  nomas
 
     public String getNombre() {
         return nombre;
