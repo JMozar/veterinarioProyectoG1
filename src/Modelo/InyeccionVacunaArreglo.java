@@ -13,7 +13,7 @@ public class InyeccionVacunaArreglo {
     
     public void agregar(InyeccionVacuna inyecciones){
         this.inyecciones[this.indice] = inyecciones;
-        this.indice++; 
+        this.indice++;
     }
     
     public void eliminar(int codigo){//codigo es el codigo de la cita a eliminar
