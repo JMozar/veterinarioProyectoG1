@@ -47,6 +47,9 @@ public class frmInyeccion extends javax.swing.JFrame {
         lblDosis = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         lblCantidadMedicamento = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jBCancelar = new javax.swing.JButton();
+        jBRegistrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,7 +106,18 @@ public class frmInyeccion extends javax.swing.JFrame {
 
         jPTipoVacuna.add(lblCantidadMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 100, -1));
 
-        getContentPane().add(jPTipoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 280, 200));
+        getContentPane().add(jPTipoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 290, 200));
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jBCancelar.setText("Cancelar");
+        jPanel1.add(jBCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 130, 60));
+
+        jBRegistrar.setText("Registrar");
+        jPanel1.add(jBRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 60));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 290, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -148,6 +162,8 @@ public class frmInyeccion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBCancelar;
+    private javax.swing.JButton jBRegistrar;
     public javax.swing.JComboBox<String> jCTipoVacuna;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -160,6 +176,7 @@ public class frmInyeccion extends javax.swing.JFrame {
     private javax.swing.JPanel jPFondo;
     private javax.swing.JPanel jPInfoVacuna;
     private javax.swing.JPanel jPTipoVacuna;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField lblCantidadMedicamento;
     private javax.swing.JTextField lblCodMascota;
     public javax.swing.JTextField lblDosis;

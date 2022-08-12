@@ -20,7 +20,7 @@ public class Vacuna {
     //recurrente o de una dosis
     
     //vacunas de una sola aplicacion
-    public Vacuna(String medicamentos, String dosis, String gramos, String fechaVacunacion) {
+    public Vacuna (String medicamentos, String dosis, String gramos, String fechaVacunacion) {
         this.medicamentos = medicamentos;
         this.dosis = dosis;
         this.gramos = gramos;
@@ -29,7 +29,7 @@ public class Vacuna {
     }
     
     //vacunas anuales
-    public Vacuna(String medicamentos, String gramos, String fechaVacunacion, int vecesAplicadas) {
+    public Vacuna (String medicamentos, String gramos, String fechaVacunacion, int vecesAplicadas) {
         this.medicamentos = medicamentos;
         this.gramos = gramos;
         this.fechaVacunacion = fechaVacunacion;

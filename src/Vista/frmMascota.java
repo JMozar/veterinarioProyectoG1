@@ -39,6 +39,8 @@ public class frmMascota extends javax.swing.JFrame {
         lblEspecieMascota = new javax.swing.JTextField();
         lblRazaMascota = new javax.swing.JTextField();
         lblColorMascota = new javax.swing.JTextField();
+        jBCancelar = new javax.swing.JButton();
+        jBRegistrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,7 +68,13 @@ public class frmMascota extends javax.swing.JFrame {
         jPanel1.add(lblRazaMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 130, -1));
         jPanel1.add(lblColorMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 130, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, 260));
+        jBCancelar.setText("Cancelar");
+        jPanel1.add(jBCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 140, 30));
+
+        jBRegistrar.setText("Registrar");
+        jPanel1.add(jBRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 140, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,6 +115,8 @@ public class frmMascota extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBCancelar;
+    private javax.swing.JButton jBRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -7,7 +7,7 @@ public class CalendarioVacuna {
     private Especie especie;
 
 
-    public CalendarioVacuna(Especie especie) {
+    public CalendarioVacuna (Especie especie) {
         this.especie = especie;
         generarVacunasegunEspecie(especie);
     }

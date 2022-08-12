@@ -21,7 +21,7 @@ public class Citas {
     private float registroTalla;
     private float registroPeso;
 
-    public Citas(String Fecha, String Diagnostico, String Tratamiento, Empleado empleado, Mascota mascota, ClienteFamilia familia, float talla, float peso) {
+    public Citas (String Fecha, String Diagnostico, String Tratamiento, Empleado empleado, Mascota mascota, ClienteFamilia familia, float talla, float peso) {
         this.codigo=contador;
         contador++;
         

@@ -6,7 +6,7 @@ public class Especie{
     
     private String nombreEspecie;
 
-    public Especie(String nombreEspecie) {
+    public Especie (String nombreEspecie) {
         this.nombreEspecie = nombreEspecie;
     }
 

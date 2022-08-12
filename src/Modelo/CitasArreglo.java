@@ -6,7 +6,7 @@ public class CitasArreglo {
     private Citas[] citas;
     private int indice;
     
-    public CitasArreglo(int tamano) {
+    public CitasArreglo (int tamano) {
         this.citas = new Citas[tamano];
         this.indice = 0;
     }

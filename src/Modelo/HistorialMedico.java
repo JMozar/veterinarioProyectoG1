@@ -12,7 +12,7 @@ public class HistorialMedico {
     //agregar citas
     //mostrar citas de un paciente
 
-    public HistorialMedico(Mascota mascota, ClienteFamilia dueño) {
+    public HistorialMedico (Mascota mascota, ClienteFamilia dueño) {
         this.mascota = mascota;
         this.dueño = dueño;
         this.citas = new CitasArreglo(5);
