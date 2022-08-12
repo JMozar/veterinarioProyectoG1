@@ -36,6 +36,10 @@ public class frmInyeccion extends javax.swing.JFrame {
         jCTipoVacuna = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         lblFechaVacuna = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        lblCodMascota = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        lblVeterinario = new javax.swing.JTextField();
         jPTipoVacuna = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         lblMedicamento = new javax.swing.JTextField();
@@ -54,11 +58,11 @@ public class frmInyeccion extends javax.swing.JFrame {
         jPInfoVacuna.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("N de vacuna: ");
-        jPInfoVacuna.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
-        jPInfoVacuna.add(lblNroVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 100, -1));
+        jPInfoVacuna.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        jPInfoVacuna.add(lblNroVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 100, -1));
 
         jLabel2.setText("Tipo de vacuna:");
-        jPInfoVacuna.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        jPInfoVacuna.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         jCTipoVacuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jCTipoVacuna.addActionListener(new java.awt.event.ActionListener() {
@@ -66,13 +70,21 @@ public class frmInyeccion extends javax.swing.JFrame {
                 jCTipoVacunaActionPerformed(evt);
             }
         });
-        jPInfoVacuna.add(jCTipoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 100, -1));
+        jPInfoVacuna.add(jCTipoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 100, -1));
 
         jLabel3.setText("Fecha de la vacuna:");
-        jPInfoVacuna.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-        jPInfoVacuna.add(lblFechaVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 100, -1));
+        jPInfoVacuna.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        jPInfoVacuna.add(lblFechaVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 100, -1));
 
-        getContentPane().add(jPInfoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 290, 190));
+        jLabel7.setText("Código de mascota:");
+        jPInfoVacuna.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
+        jPInfoVacuna.add(lblCodMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 100, -1));
+
+        jLabel8.setText("Veterinario:");
+        jPInfoVacuna.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
+        jPInfoVacuna.add(lblVeterinario, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 100, -1));
+
+        getContentPane().add(jPInfoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 290, 250));
 
         jPTipoVacuna.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo de Vacuna", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPTipoVacuna.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -91,7 +103,7 @@ public class frmInyeccion extends javax.swing.JFrame {
 
         jPTipoVacuna.add(lblCantidadMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 100, -1));
 
-        getContentPane().add(jPTipoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 280, 200));
+        getContentPane().add(jPTipoVacuna, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 280, 200));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -143,13 +155,17 @@ public class frmInyeccion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPFondo;
     private javax.swing.JPanel jPInfoVacuna;
     private javax.swing.JPanel jPTipoVacuna;
     public javax.swing.JTextField lblCantidadMedicamento;
+    private javax.swing.JTextField lblCodMascota;
     public javax.swing.JTextField lblDosis;
     public javax.swing.JTextField lblFechaVacuna;
     public javax.swing.JTextField lblMedicamento;
     public javax.swing.JTextField lblNroVacuna;
+    private javax.swing.JTextField lblVeterinario;
     // End of variables declaration//GEN-END:variables
 }
