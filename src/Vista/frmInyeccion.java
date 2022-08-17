@@ -28,7 +28,6 @@ public class frmInyeccion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPFondo = new javax.swing.JPanel();
         jPInfoVacuna = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         lblNroVacuna = new javax.swing.JTextField();
@@ -50,12 +49,10 @@ public class frmInyeccion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jBCancelar = new javax.swing.JButton();
         jBRegistrar = new javax.swing.JButton();
+        jPFondo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPInfoVacuna.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Vacuna", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
         jPInfoVacuna.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -118,6 +115,9 @@ public class frmInyeccion extends javax.swing.JFrame {
         jPanel1.add(jBRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 290, 80));
+
+        jPFondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -36,6 +36,10 @@ public class frmClientePersona extends javax.swing.JFrame {
         lblApellidoPersona = new javax.swing.JTextField();
         lblDNIPersona = new javax.swing.JTextField();
         lblTelefonoPersona = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        btnCancelarRP = new javax.swing.JButton();
+        btnRegistrarRP = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -60,6 +64,18 @@ public class frmClientePersona extends javax.swing.JFrame {
         jPanel1.add(lblTelefonoPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 120, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 370, 230));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnCancelarRP.setText("Cancelar");
+        jPanel2.add(btnCancelarRP, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 160, 40));
+
+        btnRegistrarRP.setText("Registrar");
+        jPanel2.add(btnRegistrarRP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 40));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 370, 60));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -100,11 +116,15 @@ public class frmClientePersona extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCancelarRP;
+    private javax.swing.JButton btnRegistrarRP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField lblApellidoPersona;
     private javax.swing.JTextField lblDNIPersona;
     private javax.swing.JTextField lblNombrePersona;

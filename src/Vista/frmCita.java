@@ -16,6 +16,7 @@ public class frmCita extends javax.swing.JFrame {
      */
     public frmCita() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
