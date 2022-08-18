@@ -54,27 +54,10 @@ public class InyeccionVacuna {
     }
     
     
-    
+    /*
     public void vacunarmascota(Mascota mascota, int numero){
         mascota.vacunar(numero);
     }
-    
-    
-    
-    
-    /*
-    public Asiento[] asientoslibre(){
-        Asiento[] resultado = new Asiento[getCantidadAsientosLibre()];
-        int indice = 0;
-        for(int i=0; i< numAsientos; i++){
-            if(this.asientos[i].getVenta() == null){
-                resultado[indice] = this.asientos[i];
-                indice++;
-            }
-        }
-        return resultado;
-    }
-    
     */
 
     @Override

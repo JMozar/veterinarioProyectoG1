@@ -23,7 +23,7 @@ public class Main {
         ClienteFamilia familia1 = new ClienteFamilia(5,5,"Moore", "123", "Mz B", "9999999999");
         ClienteFamilia familia2 = new ClienteFamilia(5,5,"Ramos", "133", "Mz C", "9888884657");
         //añadimos personas
-        ClientePersona persona1 = new ClientePersona("Jhon","Salazar","123",978978978);
+        ClientePersona persona1 = new ClientePersona("dx","Salazar","123",978978978);
         ClientePersona persona2 = new ClientePersona("Antonio","Zeta","122",954545454);
         //Creamos empleados
         Empleado empleado1= new Empleado("Veterinario",1200, "Juan", "Perez", "88888888", 912345678);
@@ -46,6 +46,7 @@ public class Main {
         //persona1.AñadirFamilias(familia2);
         
         familia1.mostrarIntegrantes();
+        
         System.out.println("");
         familia2.mostrarIntegrantes();
         System.out.println("");
@@ -56,7 +57,9 @@ public class Main {
         
         System.out.println("");
         familia1.AñadirMascotas(mascota1);
+        
         familia1.mostrarMascotas();
+        
         System.out.println("");
         familia2.AñadirMascotas(mascota2);
         familia2.mostrarMascotas();
@@ -75,7 +78,9 @@ public class Main {
         System.out.println("Prueba cita");
         Citas cita1=new Citas("Hoy","Diagnostico1","Tratamiento2",empleado1,mascota1,familia1,100,100);
         //añadir cita a historial medico de animal
+        
         mascota1.registrarCitaHistorial(cita1);
+        
         //mostramos de nuevo el historial
         mascota1.mostrarHistorialmedico();
         //Agregamos una segunda cita
