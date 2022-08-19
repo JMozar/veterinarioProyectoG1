@@ -35,13 +35,13 @@ public class frmMascota extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        lblFechaNacimientoMascota = new javax.swing.JTextField();
-        lblNombreMascota = new javax.swing.JTextField();
-        lblEspecieMascota = new javax.swing.JTextField();
-        lblRazaMascota = new javax.swing.JTextField();
-        lblColorMascota = new javax.swing.JTextField();
-        jBCancelar = new javax.swing.JButton();
-        jBRegistrar = new javax.swing.JButton();
+        txtFechaNacimientoMascota = new javax.swing.JTextField();
+        txtNombreMascota = new javax.swing.JTextField();
+        txtRazaMascota = new javax.swing.JTextField();
+        txtColorMascota = new javax.swing.JTextField();
+        btnRegresar = new javax.swing.JButton();
+        btnRegistrar = new javax.swing.JButton();
+        cmbEspecie = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -65,17 +65,19 @@ public class frmMascota extends javax.swing.JFrame {
 
         jLabel5.setText("Fecha de Nacimiento:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-        jPanel1.add(lblFechaNacimientoMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 130, -1));
-        jPanel1.add(lblNombreMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 130, -1));
-        jPanel1.add(lblEspecieMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 130, -1));
-        jPanel1.add(lblRazaMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 130, -1));
-        jPanel1.add(lblColorMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 130, -1));
+        jPanel1.add(txtFechaNacimientoMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 130, -1));
+        jPanel1.add(txtNombreMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 130, -1));
+        jPanel1.add(txtRazaMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 130, -1));
+        jPanel1.add(txtColorMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 130, -1));
 
-        jBCancelar.setText("Cancelar");
-        jPanel1.add(jBCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 140, 30));
+        btnRegresar.setText("Regresar");
+        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 140, 30));
 
-        jBRegistrar.setText("Registrar");
-        jPanel1.add(jBRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 140, 30));
+        btnRegistrar.setText("Registrar");
+        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 140, 30));
+
+        cmbEspecie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(cmbEspecie, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 130, -1));
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, 290));
 
@@ -120,8 +122,9 @@ public class frmMascota extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBCancelar;
-    private javax.swing.JButton jBRegistrar;
+    public javax.swing.JButton btnRegistrar;
+    public javax.swing.JButton btnRegresar;
+    public javax.swing.JComboBox<String> cmbEspecie;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -129,10 +132,9 @@ public class frmMascota extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField lblColorMascota;
-    private javax.swing.JTextField lblEspecieMascota;
-    private javax.swing.JTextField lblFechaNacimientoMascota;
-    private javax.swing.JTextField lblNombreMascota;
-    private javax.swing.JTextField lblRazaMascota;
+    public javax.swing.JTextField txtColorMascota;
+    public javax.swing.JTextField txtFechaNacimientoMascota;
+    public javax.swing.JTextField txtNombreMascota;
+    public javax.swing.JTextField txtRazaMascota;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,15 +1,10 @@
 
 package Vista;
 
-import Modelo.CalendarioVacuna;
-import Modelo.Citas;
-import Modelo.ClienteFamilia;
-import Modelo.ClientePersona;
-import Modelo.Empleado;
-import Modelo.Especie;
-import Modelo.InyeccionVacuna;
-import Modelo.Mascota;
-import java.time.LocalDate;
+
+import Modelo.*;
+import Datos.*;
+import Controlador.*;
 
 
 
@@ -30,6 +25,19 @@ public class Main {
         //añadimos mascotas
         Mascota mascota1 = new Mascota("Peque",especie1,"Mostaza","12-08-2018");
         Mascota mascota2 = new Mascota("Michi",especie2,"Mostaza","12-08-2018");
+        
+        //REPOSITORIO
+        Repositorio.mascotas.agregar(mascota1);//mascota 0
+        Repositorio.mascotas.agregar(mascota2);//mascota 1
+        
+        Repositorio.especies.agregar(especie1);
+        Repositorio.especies.agregar(especie2);
+        
+        Usuario user = new Usuario("admin","123");
+        
+        //inicio de controlador menu
+        ControladorPrincipal controlador = new ControladorPrincipal( user, new frmPrincipal() );
+        controlador.iniciar();
         
         
         //agregamos las personas al arreglo de personas
