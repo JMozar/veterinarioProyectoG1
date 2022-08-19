@@ -116,8 +116,8 @@ public class frmClientePersona extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelarRP;
-    private javax.swing.JButton btnRegistrarRP;
+    public javax.swing.JButton btnCancelarRP;
+    public javax.swing.JButton btnRegistrarRP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -125,9 +125,9 @@ public class frmClientePersona extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField lblApellidoPersona;
-    private javax.swing.JTextField lblDNIPersona;
-    private javax.swing.JTextField lblNombrePersona;
-    private javax.swing.JTextField lblTelefonoPersona;
+    public javax.swing.JTextField lblApellidoPersona;
+    public javax.swing.JTextField lblDNIPersona;
+    public javax.swing.JTextField lblNombrePersona;
+    public javax.swing.JTextField lblTelefonoPersona;
     // End of variables declaration//GEN-END:variables
 }
