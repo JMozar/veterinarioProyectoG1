@@ -39,6 +39,14 @@ public class ControladorPrincipal {
             }
         );
         
+        this.vista.btnPersonas.addActionListener(new ActionListener(){
+            public void actionPerformed (ActionEvent e){
+                ControladorRegistrarPersona controlador = new ControladorRegistrarPersona (new frmClientePersona(), Repositorio.personas);
+                controlador.iniciar();
+                vista.dispose();
+                }
+            }
+        );
         
 
     } 

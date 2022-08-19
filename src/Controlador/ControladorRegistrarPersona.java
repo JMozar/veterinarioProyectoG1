@@ -5,7 +5,6 @@ import Vista.*;
 import Datos.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 
 public class ControladorRegistrarPersona {
@@ -29,6 +28,9 @@ public class ControladorRegistrarPersona {
         );
         this.vista.btnCancelarRP.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
+                ControladorPrincipal controlador = new ControladorPrincipal(new Usuario("admin", "123"), new frmPrincipal());
+                //en lugar de crear otro usuario debemos traerlo del repo
+                controlador.iniciar();
                 vista.dispose();
                 }
             }
