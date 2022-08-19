@@ -32,17 +32,17 @@ public class frmFamilia extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtApellido = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtNroIntegrantes = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        txtNroMascotas = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtCel = new javax.swing.JTextField();
+        txtCtaB = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txtDireccion = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         btnCancelar = new javax.swing.JButton();
         btnGuardarFamilia = new javax.swing.JButton();
@@ -65,32 +65,32 @@ public class frmFamilia extends javax.swing.JFrame {
         jLabel2.setText("Apellido:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 72, -1));
 
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 20, 150, -1));
+        txtApellido.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 20, 150, -1));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Nro. de integrantes: ");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 110, -1));
 
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 58, -1));
+        txtNroIntegrantes.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel2.add(txtNroIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 58, -1));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("Nro. de Mascotas:");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 113, -1));
 
-        jTextField4.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 56, -1));
+        txtNroMascotas.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel2.add(txtNroMascotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 56, -1));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText("Teléfono/Celular:");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 100, -1));
 
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 81, -1));
+        txtCel.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel2.add(txtCel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 81, -1));
 
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 70, 150, -1));
+        txtCtaB.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jPanel2.add(txtCtaB, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 70, 150, -1));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Nro. Cta. Bancaria");
@@ -100,13 +100,13 @@ public class frmFamilia extends javax.swing.JFrame {
         jLabel6.setText("Dirección:");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 72, -1));
 
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        txtDireccion.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtDireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                txtDireccionActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 120, 150, -1));
+        jPanel2.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 120, 150, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 520, 160));
 
@@ -125,9 +125,9 @@ public class frmFamilia extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void txtDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_txtDireccionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,11 +177,11 @@ public class frmFamilia extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtCel;
+    private javax.swing.JTextField txtCtaB;
+    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtNroIntegrantes;
+    private javax.swing.JTextField txtNroMascotas;
     // End of variables declaration//GEN-END:variables
 }

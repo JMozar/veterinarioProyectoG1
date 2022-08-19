@@ -1,4 +1,4 @@
-package Modelo;
+   package Modelo;
 
 public class ClienteFamilia {
     private static int contador=0;
