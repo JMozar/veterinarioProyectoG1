@@ -18,11 +18,13 @@ public class ControladorMascota {
         
         //botones
         this.vista.btnRegistrar.addActionListener( new ActionListener() {
-                public void actionPerformed(ActionEvent e)
+                public void actionPerformed(ActionEvent e){
                     //comienza
                     //Mascota mascota1 = new Mascota("Peque",especie1,"Mostaza","12-08-2018");
                     Mascota m = new Mascota(vista.txtNombreMascota.getText(), (Especie) vista.cmbEspecie.getSelectedItem(),
                             vista.txtColorMascota.getText(),vista.txtFechaNacimientoMascota.getText());
+                    //Agregamos las mascotas al repo
+                    Repositorio.mascotas.agregar(m);
                     System.out.println("MASCOTA AGREGADA");
                     JOptionPane.showMessageDialog(null, "Mascota Agregada");
                     JOptionPane.showMessageDialog(null, m.toString());
@@ -55,4 +57,5 @@ public class ControladorMascota {
         //le doy al combo del form el modelo
         this.vista.cmbEspecie.setModel(modeloCboEspecies);
     }
+}
 

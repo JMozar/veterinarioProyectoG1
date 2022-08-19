@@ -29,6 +29,16 @@ public class ControladorPrincipal {
             }
         );
         
+        this.vista.btnFamilias.addActionListener( new ActionListener() {
+                public void actionPerformed(ActionEvent e){
+                    
+                    ControladorFamilias controlador = new ControladorFamilias( new frmFamilia(),Repositorio.familias);
+                    controlador.iniciar();
+                    vista.dispose();
+                }
+            }
+        );
+        
         
 
     } 

@@ -93,7 +93,7 @@ public class ClienteFamilia {
 
     @Override
     public String toString() {
-        return "ClienteFamilia{" + "Apellido_Familia=" + Apellido_Familia + ", Num_Ctab=" + Num_Ctab + ", Direccion=" + Direccion + ", telefono=" + telefono + '}';
+        return "ClienteFamilia{" +this.codigo+ " - Apellido_Familia=" + Apellido_Familia + ", Num_Ctab=" + Num_Ctab + ", Direccion=" + Direccion + ", telefono=" + telefono + '}';
     }
 
     public void mostrarIntegrantes() {

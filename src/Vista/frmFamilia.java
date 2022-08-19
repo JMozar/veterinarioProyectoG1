@@ -165,8 +165,8 @@ public class frmFamilia extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnGuardarFamilia;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnGuardarFamilia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -177,11 +177,11 @@ public class frmFamilia extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField txtApellido;
-    private javax.swing.JTextField txtCel;
-    private javax.swing.JTextField txtCtaB;
-    private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtNroIntegrantes;
-    private javax.swing.JTextField txtNroMascotas;
+    public javax.swing.JTextField txtApellido;
+    public javax.swing.JTextField txtCel;
+    public javax.swing.JTextField txtCtaB;
+    public javax.swing.JTextField txtDireccion;
+    public javax.swing.JTextField txtNroIntegrantes;
+    public javax.swing.JTextField txtNroMascotas;
     // End of variables declaration//GEN-END:variables
 }
