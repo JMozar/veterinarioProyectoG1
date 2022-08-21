@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class ControladorMascota {
     private frmMascota vista;
     private MascotaArreglo modelo;
-
+    //a
     public ControladorMascota(frmMascota vista, MascotaArreglo modelo) {
         this.vista = vista;
         this.modelo = modelo;
