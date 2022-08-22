@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Mascota {
     private Especie especie;
-    private Raza raza;
+    private String raza;
     private static int contador=0;
     private int codigo;
     private String nombre;
@@ -19,11 +19,12 @@ public class Mascota {
     //private historialMedico
     
 
-    public Mascota(String nombre, Especie especie, String colorPelo, String fechaNacimiento) {//falta pelo, fecha nacimiento
+    public Mascota(String nombre, Especie especie, String raza,String colorPelo, String fechaNacimiento) {//falta pelo, fecha nacimiento
         this.codigo = contador;
         contador++;
         this.nombre = nombre;
         this.especie=especie;
+        this.raza=raza;
         this.colorPelo=colorPelo;
         this.fechaNacimiento=fechaNacimiento;
         this.HistorialMascota=new HistorialMedico(this,dueño);
@@ -69,6 +70,36 @@ public class Mascota {
     //validar codigo que sea numero o que se aumente automticamente
     //saberedad de mascota en meses
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getColorPelo() {
+        return colorPelo;
+    }
+
+    public void setColorPelo(String colorPelo) {
+        this.colorPelo = colorPelo;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+    
+    public String getEspecie() {
+        return especie.getNombreEspecie();
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+    
+    
+
     public String getNombre() {
         return nombre;
     }
@@ -102,12 +133,14 @@ public class Mascota {
     public void setDueño(ClienteFamilia dueño) {
         this.dueño = dueño;
     }
-    
 
     @Override
     public String toString() {
-        return "Mascota{" + "codigo=" + codigo + ", nombre=" + nombre + ", especie="+especie+'}';
+        return "Mascota{" + "especie=" + especie + ", codigo=" + codigo + ", nombre=" + nombre + ", talla=" + talla + ", peso=" + peso + '}';
     }
+    
+
+    
     
     
     

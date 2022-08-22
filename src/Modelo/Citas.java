@@ -13,7 +13,7 @@ public class Citas {
     private String Fecha; //CAMBIAR a DATE
     private String Diagnostico;//¿Que tiene?
     private String Tratamiento;//Como se quita
-    private String Vacunas; // 
+    
 
     private Empleado empleado;
     private Mascota mascota;
@@ -85,7 +85,7 @@ public class Citas {
     public String toString() {
         
         return "Citas{" + "Codigo=" + codigo + ", Fecha=" + Fecha + ", \nDiagnostico=" + 
-                Diagnostico + ", \nTratamiento=" + Tratamiento + ", Vacunas=" + Vacunas + 
+                Diagnostico + ", \nTratamiento=" + Tratamiento +  
                 ", \nPeso=" + registroPeso + ", Talla=" + registroTalla + 
                 ", \nEmpleado=" + empleado.getNombre()+" "+empleado.getApellido() + 
                 ", Mascota=" + mascota + ", familia=" + familia +"\n"+ '}';

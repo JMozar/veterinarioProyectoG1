@@ -36,7 +36,7 @@ public class ClientePersonaArreglo {
         }
     }
 
-    //Con esto elimina pero queda null al final
+    //Con esto elimina
     public void rellenarNull(int x) {
         int numero=0;
         if (x >= 0) {

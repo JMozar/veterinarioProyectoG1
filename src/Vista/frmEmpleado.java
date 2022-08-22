@@ -8,12 +8,12 @@ package Vista;
  *
  * @author jvrui
  */
-public class frmClientePersona extends javax.swing.JFrame {
+public class frmEmpleado extends javax.swing.JFrame {
 
     /**
      * Creates new form frmClientePersona
      */
-    public frmClientePersona() {
+    public frmEmpleado() {
         initComponents();
         this.setLocationRelativeTo(null); 
     }
@@ -36,6 +36,8 @@ public class frmClientePersona extends javax.swing.JFrame {
         lblApellidoPersona = new javax.swing.JTextField();
         lblDNIPersona = new javax.swing.JTextField();
         lblTelefonoPersona = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         btnCancelarRP = new javax.swing.JButton();
         btnRegistrarRP = new javax.swing.JButton();
@@ -67,7 +69,11 @@ public class frmClientePersona extends javax.swing.JFrame {
         jPanel1.add(lblDNIPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 120, -1));
         jPanel1.add(lblTelefonoPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 120, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 280, 230));
+        jLabel5.setText("Sueldo:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 120, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 280, 250));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -81,7 +87,7 @@ public class frmClientePersona extends javax.swing.JFrame {
         jButton1.setText("Eliminar");
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 150, 40));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 520, 60));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 520, 60));
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 250));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -121,20 +127,21 @@ public class frmClientePersona extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmClientePersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmClientePersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmClientePersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmClientePersona.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmEmpleado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmClientePersona().setVisible(true);
+                new frmEmpleado().setVisible(true);
             }
         });
     }
@@ -147,12 +154,14 @@ public class frmClientePersona extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     public javax.swing.JTextField lblApellidoPersona;
     public javax.swing.JTextField lblDNIPersona;
     public javax.swing.JTextField lblNombrePersona;

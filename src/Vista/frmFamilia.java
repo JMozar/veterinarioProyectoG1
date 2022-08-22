@@ -37,15 +37,21 @@ public class frmFamilia extends javax.swing.JFrame {
         txtNroIntegrantes = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtNroMascotas = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        txtCel = new javax.swing.JTextField();
         txtCtaB = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         txtDireccion = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        txtCel = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         btnCancelar = new javax.swing.JButton();
         btnGuardarFamilia = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,10 +59,9 @@ public class frmFamilia extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 153, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Registro de Familia");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 395, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 180, -1));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,39 +71,32 @@ public class frmFamilia extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 72, -1));
 
         txtApellido.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 20, 150, -1));
+        jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 150, -1));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Nro. de integrantes: ");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, 110, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 120, -1));
 
         txtNroIntegrantes.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtNroIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 58, -1));
+        jPanel2.add(txtNroIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 58, -1));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("Nro. de Mascotas:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 113, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 113, -1));
 
         txtNroMascotas.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtNroMascotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 56, -1));
-
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel7.setText("Teléfono/Celular:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, 100, -1));
-
-        txtCel.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtCel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 81, -1));
+        jPanel2.add(txtNroMascotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 56, -1));
 
         txtCtaB.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtCtaB, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 70, 150, -1));
+        jPanel2.add(txtCtaB, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 150, -1));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Nro. Cta. Bancaria");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 100, 20));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 100, 20));
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText("Dirección:");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 72, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 72, -1));
 
         txtDireccion.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtDireccion.addActionListener(new java.awt.event.ActionListener() {
@@ -106,21 +104,51 @@ public class frmFamilia extends javax.swing.JFrame {
                 txtDireccionActionPerformed(evt);
             }
         });
-        jPanel2.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 120, 150, -1));
+        jPanel2.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 150, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 520, 160));
+        jLabel8.setText("Celular:");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+        jPanel2.add(txtCel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 140, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 300, 260));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 330));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCancelar.setText("Cancelar");
-        jPanel3.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 190, 30));
+        btnCancelar.setText("Eliminar");
+        jPanel3.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 130, 30));
 
         btnGuardarFamilia.setText("Guardar");
-        jPanel3.add(btnGuardarFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 190, 30));
+        jPanel3.add(btnGuardarFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 30));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 520, 50));
+        jButton1.setText("Integrantes");
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 140, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 300));
+        jButton2.setText("Mascotas");
+        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 140, -1));
+
+        jButton3.setText("Cancelar");
+        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 130, -1));
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 820, 50));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel4.add(jScrollPane1);
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 470, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -167,16 +195,22 @@ public class frmFamilia extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnGuardarFamilia;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     public javax.swing.JTextField txtApellido;
     public javax.swing.JTextField txtCel;
     public javax.swing.JTextField txtCtaB;

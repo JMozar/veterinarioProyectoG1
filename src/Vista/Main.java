@@ -23,8 +23,8 @@ public class Main {
         //Creamos empleados
         Empleado empleado1= new Empleado("Veterinario",1200, "Juan", "Perez", "88888888", 912345678);
         //añadimos mascotas
-        Mascota mascota1 = new Mascota("Peque",especie1,"Mostaza","12-08-2018");
-        Mascota mascota2 = new Mascota("Michi",especie2,"Mostaza","12-08-2018");
+        Mascota mascota1 = new Mascota("Peque",especie1,"chiwawa","Mostaza","12-08-2018");
+        Mascota mascota2 = new Mascota("Michi",especie2,"unica","Mostaza","12-08-2018");
         
         //REPOSITORIO
         Repositorio.mascotas.agregar(mascota1);//mascota 0
@@ -83,11 +83,15 @@ public class Main {
         mascota2.mostrarHistorialmedico();
         mascota2.mostrarVacunas();
         
+        System.out.println(mascota1.toString());
         System.out.println("Prueba cita");
         Citas cita1=new Citas("Hoy","Diagnostico1","Tratamiento2",empleado1,mascota1,familia1,100,100);
         //añadir cita a historial medico de animal
         
         mascota1.registrarCitaHistorial(cita1);
+        mascota1.setPeso(100);
+        mascota1.setPeso(100);
+        System.out.println(mascota1.toString());
         
         //mostramos de nuevo el historial
         mascota1.mostrarHistorialmedico();

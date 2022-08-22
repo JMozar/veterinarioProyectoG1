@@ -39,9 +39,15 @@ public class frmMascota extends javax.swing.JFrame {
         txtNombreMascota = new javax.swing.JTextField();
         txtRazaMascota = new javax.swing.JTextField();
         txtColorMascota = new javax.swing.JTextField();
-        btnRegresar = new javax.swing.JButton();
-        btnRegistrar = new javax.swing.JButton();
         cmbEspecie = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
+        btnRegistrar = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblMascotasRepo = new javax.swing.JTable();
+        btnEliminar = new javax.swing.JButton();
+        btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,25 +72,71 @@ public class frmMascota extends javax.swing.JFrame {
         jLabel5.setText("Fecha de Nacimiento:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
         jPanel1.add(txtFechaNacimientoMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 130, -1));
+
+        txtNombreMascota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreMascotaActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtNombreMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 130, -1));
         jPanel1.add(txtRazaMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 130, -1));
         jPanel1.add(txtColorMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 130, -1));
 
-        btnRegresar.setText("Regresar");
-        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 140, 30));
-
-        btnRegistrar.setText("Registrar");
-        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 140, 30));
-
         cmbEspecie.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(cmbEspecie, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 130, -1));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, 290));
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, 250));
+        jPanel1.getAccessibleContext().setAccessibleName("");
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 330));
+        jButton4.setText("Historial Medico");
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, 140, -1));
+
+        btnRegistrar.setText("Registrar");
+        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 140, 30));
+
+        jButton2.setText("Vacunar");
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 160, -1));
+
+        tblMascotasRepo.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tblMascotasRepo);
+
+        jPanel3.add(jScrollPane1);
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 460, 220));
+
+        btnEliminar.setText("Eliminar");
+        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 120, -1));
+
+        btnRegresar.setText("Regresar");
+        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, 140, 30));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNombreMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreMascotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreMascotaActionPerformed
+
+    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,9 +174,12 @@ public class frmMascota extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnRegistrar;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JComboBox<String> cmbEspecie;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -132,6 +187,9 @@ public class frmMascota extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable tblMascotasRepo;
     public javax.swing.JTextField txtColorMascota;
     public javax.swing.JTextField txtFechaNacimientoMascota;
     public javax.swing.JTextField txtNombreMascota;
