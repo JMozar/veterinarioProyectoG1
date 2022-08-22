@@ -77,7 +77,7 @@ public class ClienteFamilia {
     public void EliminarPersonaAsginada(int indice) {//indice es el numero de la persona a eliminar
         System.out.println("Cambio en la familia "+this.Apellido_Familia+":");
         System.out.println(integrantesFamilia.devolverArreglo()[indice].getNombre()+" eliminado");
-        integrantesFamilia.rellenarNull(indice);
+        integrantesFamilia.eliminar(indice);
         
     }
     

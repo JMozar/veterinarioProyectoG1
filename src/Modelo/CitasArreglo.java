@@ -16,20 +16,20 @@ public class CitasArreglo {
         this.indice++; 
     }
     
-    public void eliminar(int codigo){//codigo es el codigo de la cita a eliminar
-        int posicion = -1;
-        for(int i = 0;i<citas.length;i++){
-            if(codigo==(this.citas[i].getCodigo())){
-                posicion=i;
+    public void eliminar(int x) {
+        int numero=0;
+        if (x >= 0) {
+            for (int i = x; i < citas.length - 1; i++) {
+                citas[i] = citas[i + 1];
+                citas[i + 1] = null;
+                numero=i;
             }
-        }
-        if(posicion>-1){
-            this.citas[posicion]=null;
-            System.out.println("Se elimino la cita con codigo "+posicion);
+            
         }else{
-            System.out.println("Cita no encontrada");
+            System.out.println("Posicion invalida");
         }
-        
+        indice--;
+
     }
     
     

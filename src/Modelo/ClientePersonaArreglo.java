@@ -20,24 +20,7 @@ public class ClientePersonaArreglo {
     }
     
 
-    public void eliminar(String DNI) {//codigo es el codigo a eliminar
-        int posicion = -1;
-        for (int i = 0; i < ClientePersonas.length; i++) {
-            if (DNI.equals(this.ClientePersonas[i].getDNI())) {
-                posicion = i;
-            }
-        }
-        if (posicion > -1) {
-            this.ClientePersonas[posicion] = null;
-            rellenarNull(posicion);//mover arreglo
-            System.out.println("Se elimino a la persona con DNI " + DNI);
-        } else {
-            System.out.println("Persona no encontrada");
-        }
-    }
-
-    //Con esto elimina
-    public void rellenarNull(int x) {
+    public void eliminar(int x) {
         int numero=0;
         if (x >= 0) {
             for (int i = x; i < ClientePersonas.length - 1; i++) {

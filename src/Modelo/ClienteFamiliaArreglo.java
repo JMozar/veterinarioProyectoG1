@@ -16,35 +16,22 @@ public class ClienteFamiliaArreglo {
         this.indice++; 
     }
     
-    //CORREGIR
-    public void eliminar(int codigo){//codigo es el codigo a eliminar
-        System.out.println("HOLA");
-        int posicion = -1;
-        for(int i = 0;i<ClienteFamilia.length;i++){
-            if(codigo==(this.ClienteFamilia[i].getCodigo())){
-                posicion=i;
-                
+    public void eliminar(int x) {
+        int numero=0;
+        if (x >= 0) {
+            for (int i = x; i < ClienteFamilia.length - 1; i++) {
+                ClienteFamilia[i] = ClienteFamilia[i + 1];
+                ClienteFamilia[i + 1] = null;
+                numero=i;
             }
-        }
-        if(posicion>-1){
             
-            this.ClienteFamilia[posicion]=null;
-            //rellenarNull(posicion);
-            System.out.println("Se elimino a la familia con codigo "+posicion);
         }else{
-            System.out.println("Familia no encontrada");
+            System.out.println("Posicion invalida");
         }
-        //no dejar espacios del arreglo vacio
-        
+        indice--;
+
     }
     
-    public void rellenarNull(int x){
-        for(int i=x;i<ClienteFamilia.length-1;i++){
-            ClienteFamilia[i]=ClienteFamilia[i+1];
-            
-        }
-        
-    }
     public ClienteFamilia[] devolverIntegrantes(){
         return this.ClienteFamilia;
     }

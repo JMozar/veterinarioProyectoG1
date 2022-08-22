@@ -19,6 +19,7 @@ public class EspecieArreglo {
         return this.especies;
     }
     
+    //necesario para ver datos en combobox
     public Especie[] getDatosCombo() {
         Especie resultado[] = null;
         if (!vacio()) {

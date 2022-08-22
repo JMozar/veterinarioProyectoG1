@@ -16,19 +16,20 @@ public class InyeccionVacunaArreglo {
         this.indice++;
     }
     
-    public void eliminar(int codigo){//codigo es el codigo de la cita a eliminar
-        int posicion = -1;
-        for(int i = 0;i<inyecciones.length;i++){
-            if(codigo==(this.inyecciones[i].getCodigo())){
-                posicion=i;
+    public void eliminar(int x) {
+        int numero=0;
+        if (x >= 0) {
+            for (int i = x; i < inyecciones.length - 1; i++) {
+                inyecciones[i] = inyecciones[i + 1];
+                inyecciones[i + 1] = null;
+                numero=i;
             }
-        }
-        if(posicion>-1){
-            this.inyecciones[posicion]=null;
-            System.out.println("Se elimino la inyeccion con codigo "+posicion);
+            //System.out.println(ClientePersonas[numero].getNombre()+" fue eliminado.");
         }else{
-            System.out.println("Inyeccion no encontrada");
+            System.out.println("Posicion invalida");
         }
+        indice--;
+
     }
     
     

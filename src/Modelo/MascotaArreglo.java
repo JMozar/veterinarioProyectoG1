@@ -35,6 +35,7 @@ public class MascotaArreglo {
 
     }
     
+    //Necesario para mostrar datos en tabla
     public String[] getCabecera() {
         return cabecera;
     }
