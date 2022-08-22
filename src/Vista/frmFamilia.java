@@ -71,6 +71,11 @@ public class frmFamilia extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 72, -1));
 
         txtApellido.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellidoActionPerformed(evt);
+            }
+        });
         jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 150, -1));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -120,6 +125,11 @@ public class frmFamilia extends javax.swing.JFrame {
         jPanel3.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 130, 30));
 
         btnGuardarFamilia.setText("Guardar");
+        btnGuardarFamilia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarFamiliaActionPerformed(evt);
+            }
+        });
         jPanel3.add(btnGuardarFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 30));
 
         jButton1.setText("Integrantes");
@@ -156,6 +166,14 @@ public class frmFamilia extends javax.swing.JFrame {
     private void txtDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDireccionActionPerformed
+
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidoActionPerformed
+
+    private void btnGuardarFamiliaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarFamiliaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarFamiliaActionPerformed
 
     /**
      * @param args the command line arguments

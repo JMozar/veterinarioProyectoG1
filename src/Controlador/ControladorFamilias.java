@@ -25,6 +25,7 @@ public class ControladorFamilias {
                 System.out.println("FAMILIA AGREGADA ");
                 //lo agregamos al repositorio
                 Repositorio.familias.agregar(f);
+                
                 JOptionPane.showMessageDialog(null, "Familia Agregada ");
                 JOptionPane.showMessageDialog(null, f.toString());
             }

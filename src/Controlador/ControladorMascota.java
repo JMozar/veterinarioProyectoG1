@@ -29,6 +29,7 @@ public class ControladorMascota {
                         vista.txtColorMascota.getText(), vista.txtFechaNacimientoMascota.getText());
                 //Agregamos las mascotas al repo
                 Repositorio.mascotas.agregar(m);
+                
                 System.out.println("MASCOTA AGREGADA");
                 JOptionPane.showMessageDialog(null, "Mascota Agregada");
                 JOptionPane.showMessageDialog(null, m.toString());

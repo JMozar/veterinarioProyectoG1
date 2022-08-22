@@ -90,7 +90,7 @@ public class Main {
         
         mascota1.registrarCitaHistorial(cita1);
         mascota1.setPeso(100);
-        mascota1.setPeso(100);
+        mascota1.setTalla(100);
         System.out.println(mascota1.toString());
         
         //mostramos de nuevo el historial
