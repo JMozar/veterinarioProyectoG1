@@ -20,8 +20,11 @@ public class Main {
         //añadimos personas
         ClientePersona persona1 = new ClientePersona("dx","Salazar","123",978978978);
         ClientePersona persona2 = new ClientePersona("Antonio","Zeta","122",954545454);
+        Repositorio.personas.agregar(persona1);
+        Repositorio.personas.agregar(persona1);
         //Creamos empleados
         Empleado empleado1= new Empleado("Veterinario",1200, "Juan", "Perez", "88888888", 912345678);
+        Repositorio.empleados.agregar(empleado1);//si no hay empleados sale error
         //añadimos mascotas
         Mascota mascota1 = new Mascota("Peque",especie1,"chiwawa","Mostaza","12-08-2018");
         Mascota mascota2 = new Mascota("Michi",especie2,"unica","Mostaza","12-08-2018");
@@ -78,10 +81,10 @@ public class Main {
         
         System.out.println("PRUEBAS HISTORIAL MEDICO");
         //mostrar historial medico de la mascota
-        mascota1.mostrarHistorialmedico();
+        System.out.println(mascota1.mostrarHistorialmedico());
         System.out.println("");
-        mascota2.mostrarHistorialmedico();
-        mascota2.mostrarVacunas();
+        System.out.println(mascota2.mostrarHistorialmedico());
+        System.out.println(mascota2.mostrarVacunas());
         
         System.out.println(mascota1.toString());
         System.out.println("Prueba cita");
@@ -94,23 +97,24 @@ public class Main {
         System.out.println(mascota1.toString());
         
         //mostramos de nuevo el historial
-        mascota1.mostrarHistorialmedico();
+        System.out.println(mascota1.mostrarHistorialmedico());
         //Agregamos una segunda cita
         Citas cita2=new Citas("Mañana","Diagnostico2","Tratamiento3",empleado1,mascota1,familia1,300,200);
         mascota1.registrarCitaHistorial(cita2);
-        mascota1.mostrarHistorialmedico();
+        System.out.println(mascota1.mostrarHistorialmedico());
         
         //Agregamos una inyeccion a la mascota
-        InyeccionVacuna inyeccion1 = new InyeccionVacuna(2,"tipo1","Lunes",mascota1,empleado1);
-        InyeccionVacuna inyeccion2 = new InyeccionVacuna(2,"tipo2","Martes",mascota1,empleado1);
+        InyeccionVacuna inyeccion1 = new InyeccionVacuna(1,"Lunes",mascota1,empleado1);
+        InyeccionVacuna inyeccion2 = new InyeccionVacuna(2,"Martes",mascota1,empleado1);
+        Repositorio.inyecciones.agregar(inyeccion1);
         mascota1.registrarInyeccionHistorial(inyeccion1);
         mascota1.registrarInyeccionHistorial(inyeccion2);
-        mascota1.mostrarHistorialmedico();
+        System.out.println(mascota1.mostrarHistorialmedico());
         
         System.out.println("");
         System.out.println("Prueba vacunacion");
         System.out.println("");
-        mascota1.mostrarVacunas();
+        System.out.println(mascota1.mostrarVacunas());
         
         mascota1.vacunar(0);
         mascota1.vacunar(1);
@@ -120,7 +124,7 @@ public class Main {
         mascota1.mostrarVacunas();
         mascota1.vacunar(3);
         
-        mascota1.mostrarVacunas();
+        System.out.println(mascota1.mostrarVacunas());
         
         System.out.println("");
         
@@ -146,7 +150,6 @@ public class Main {
         calPerro.mostrarCalendario();System.out.println("");
         calGato.mostrarCalendario();
         */
-        
     }
 }
     

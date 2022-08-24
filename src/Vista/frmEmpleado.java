@@ -32,20 +32,22 @@ public class frmEmpleado extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        lblNombrePersona = new javax.swing.JTextField();
-        lblApellidoPersona = new javax.swing.JTextField();
-        lblDNIPersona = new javax.swing.JTextField();
-        lblTelefonoPersona = new javax.swing.JTextField();
+        txtNombreEmpleado = new javax.swing.JTextField();
+        txtApellidoEmpleado = new javax.swing.JTextField();
+        txtDNIEmpleado = new javax.swing.JTextField();
+        lblTelefonoEmpleado = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtSueldo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtEspecialidad = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        btnCancelarRP = new javax.swing.JButton();
-        btnRegistrarRP = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnRegistrar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblEmpleadoRepo = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,33 +66,37 @@ public class frmEmpleado extends javax.swing.JFrame {
 
         jLabel4.setText("Teléfono (celular):");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
-        jPanel1.add(lblNombrePersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 120, -1));
-        jPanel1.add(lblApellidoPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 120, -1));
-        jPanel1.add(lblDNIPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 120, -1));
-        jPanel1.add(lblTelefonoPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 120, -1));
+        jPanel1.add(txtNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 120, -1));
+        jPanel1.add(txtApellidoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 120, -1));
+        jPanel1.add(txtDNIEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 120, -1));
+        jPanel1.add(lblTelefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 120, -1));
 
         jLabel5.setText("Sueldo:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 120, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        jPanel1.add(txtSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 120, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 280, 250));
+        jLabel6.setText("Especialidad:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+        jPanel1.add(txtEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 120, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 280, 290));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCancelarRP.setText("Cancelar");
-        jPanel2.add(btnCancelarRP, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 160, 40));
+        btnCancelar.setText("Cancelar");
+        jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 160, 40));
 
-        btnRegistrarRP.setText("Registrar");
-        jPanel2.add(btnRegistrarRP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 40));
+        btnRegistrar.setText("Registrar");
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 40));
 
-        jButton1.setText("Eliminar");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 150, 40));
+        btnEliminar.setText("Eliminar");
+        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 150, 40));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 520, 60));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 520, 60));
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 250));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblEmpleadoRepo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -101,7 +107,7 @@ public class frmEmpleado extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblEmpleadoRepo);
 
         jPanel4.add(jScrollPane1);
 
@@ -137,6 +143,8 @@ public class frmEmpleado extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -147,24 +155,26 @@ public class frmEmpleado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnCancelarRP;
-    public javax.swing.JButton btnRegistrarRP;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    public javax.swing.JTextField lblApellidoPersona;
-    public javax.swing.JTextField lblDNIPersona;
-    public javax.swing.JTextField lblNombrePersona;
-    public javax.swing.JTextField lblTelefonoPersona;
+    public javax.swing.JTextField lblTelefonoEmpleado;
+    public javax.swing.JTable tblEmpleadoRepo;
+    public javax.swing.JTextField txtApellidoEmpleado;
+    public javax.swing.JTextField txtDNIEmpleado;
+    public javax.swing.JTextField txtEspecialidad;
+    public javax.swing.JTextField txtNombreEmpleado;
+    public javax.swing.JTextField txtSueldo;
     // End of variables declaration//GEN-END:variables
 }

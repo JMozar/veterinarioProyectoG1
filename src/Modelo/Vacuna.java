@@ -6,6 +6,7 @@ import java.util.Date;
 
 public class Vacuna {
     private String medicamentos;
+    private int numVacuna;
     private String dosis;
     private String gramos;
     private String fechaVacunacion;
@@ -20,7 +21,8 @@ public class Vacuna {
     //recurrente o de una dosis
     
     //vacunas de una sola aplicacion
-    public Vacuna (String medicamentos, String dosis, String gramos, String fechaVacunacion) {
+    public Vacuna (int numVacuna, String medicamentos, String dosis, String gramos, String fechaVacunacion) {
+        this.numVacuna=numVacuna;
         this.medicamentos = medicamentos;
         this.dosis = dosis;
         this.gramos = gramos;
@@ -29,7 +31,8 @@ public class Vacuna {
     }
     
     //vacunas anuales
-    public Vacuna (String medicamentos, String gramos, String fechaVacunacion, int vecesAplicadas) {
+    public Vacuna (int numVacuna,String medicamentos, String gramos, String fechaVacunacion, int vecesAplicadas) {
+        this.numVacuna=numVacuna;
         this.medicamentos = medicamentos;
         this.gramos = gramos;
         this.fechaVacunacion = fechaVacunacion;
@@ -108,11 +111,11 @@ public class Vacuna {
     public String toString() {
         String datosVacuna="";
         if(recurrente==false){
-            datosVacuna="Vacuna{" + "medicamentos=" + medicamentos + ", dosis=" + dosis +
+            datosVacuna= numVacuna + ".-medicamentos=" + medicamentos + ", dosis=" + dosis +
                 ", gramos=" + gramos + ", fechaVacunacion=" + fechaVacunacion +
                 ", estado=" + estadoVacuna()+"";
         }else{
-            datosVacuna="Vacuna{" + "medicamentos=" + medicamentos +
+            datosVacuna= numVacuna + ".-medicamentos=" + medicamentos +
                 ", gramos=" + gramos + ", fechaVacunacion=" + fechaVacunacion +
                 ", Veces aplicada="+vecesAplicadas;
         }

@@ -15,21 +15,21 @@ public class CalendarioVacuna {
     private void generarVacunasegunEspecie(Especie especie) {
         if (especie.getNombreEspecie() == "Perro") {
             this.vacunas = new Vacuna[4];
-            this.vacunas[0] = new Vacuna("Polivalente + Distemper + Parvovirus", "1", "10g", "2 meses");
-            this.vacunas[1] = new Vacuna("Polivalente", "1", "10g", "4 meses");
-            this.vacunas[2] = new Vacuna("Polivalente+Antirrabico", "1", "10g", "6 meses");
+            this.vacunas[0] = new Vacuna(1,"Polivalente + Distemper + Parvovirus", "1", "10g", "2 meses");
+            this.vacunas[1] = new Vacuna(2,"Polivalente", "1", "10g", "4 meses");
+            this.vacunas[2] = new Vacuna(3,"Polivalente+Antirrabico", "1", "10g", "6 meses");
             //vacuna Anual
-            this.vacunas[3] = new Vacuna("Polivalente+Antirrabico", "10g", "Anualmente", 0);
+            this.vacunas[3] = new Vacuna(4,"Polivalente+Antirrabico", "10g", "Anualmente", 0);
             //(usamos contructores diferentes)
         }
         if (especie.getNombreEspecie() == "Gato") {
             this.vacunas = new Vacuna[5];
-            this.vacunas[0] = new Vacuna("Trivalente Felina", "1", "10g", "2 meses");
-            this.vacunas[1] = new Vacuna("Trivalente Felina", "2", "10g", "4 meses");
-            this.vacunas[2] = new Vacuna("Leucemia felina", "1", "10g", "6 meses");
-            this.vacunas[3] = new Vacuna("Antirabica", "1", "10g", "8 meses");
+            this.vacunas[0] = new Vacuna(1,"Trivalente Felina", "1", "10g", "2 meses");
+            this.vacunas[1] = new Vacuna(2,"Trivalente Felina", "2", "10g", "4 meses");
+            this.vacunas[2] = new Vacuna(3,"Leucemia felina", "1", "10g", "6 meses");
+            this.vacunas[3] = new Vacuna(4,"Antirabica", "1", "10g", "8 meses");
             //Vacuna Anual
-            this.vacunas[4]= new Vacuna("Trivalente Felina + Antirrabico", "20g", "Anualmente", 0);
+            this.vacunas[4]= new Vacuna(5,"Trivalente Felina + Antirrabico", "20g", "Anualmente", 0);
 
         }
 
@@ -54,5 +54,12 @@ public class CalendarioVacuna {
         }
 
         System.out.println("");
+    }
+    public String CalendarioVacunas() {
+        String texto="";
+        for (int i = 0; i < vacunas.length; i++) {
+                texto=texto+"\n"+(vacunas[i].toString());
+            }
+        return texto;
     }
 }

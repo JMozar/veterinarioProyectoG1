@@ -62,6 +62,36 @@ public class MascotaArreglo {
         }
         return resultado;
     }
+    //devolver mascota a partir de su codigo
+    public Mascota devolverMascota(int codigo) {
+        Mascota resultado = null;
+         for(int i=0; i < mascotas.length; i++){
+            if( codigo==this.mascotas[i].getCodigo() ) {
+                resultado = this.mascotas[i];
+                break;
+            }
+        }
+        return resultado;
+    }
+    //para el combobox de mascotas
+    public boolean vacio(){
+        if(this.indice==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public Mascota[] getDatosCombo() {
+        Mascota resultado[] = null;
+        if (!vacio()) {
+            resultado = new Mascota[this.indice];
+            for (int i = 0; i < this.indice; i++) {
+                resultado[i] = this.mascotas[i];
+            }
+        }
+        return resultado;
+    }
     
     @Override
     public String toString() {

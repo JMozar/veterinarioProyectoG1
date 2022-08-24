@@ -39,8 +39,9 @@ public class Mascota {
     public void registrarCitaHistorial(Citas cita){
         HistorialMascota.añadirCitas(cita);
     }
-    public void mostrarHistorialmedico(){
-        HistorialMascota.mostrarHistorialMedico();
+    
+    public String mostrarHistorialmedico(){
+        return HistorialMascota.mostrarHistorial();
     }
     
     
@@ -48,9 +49,9 @@ public class Mascota {
         
     }
     
-    public void mostrarVacunas(){
-        System.out.println("Estado de vacunas de "+this.nombre+": ");
-        vacunasDesignadas.mostrarCalendario();
+    public String mostrarVacunas(){
+        return "Estado de vacunas de "+this.nombre+": "+
+        vacunasDesignadas.CalendarioVacunas();
     }
     /*
     public void vacunar(int numeroVacuna){//el numero de la vacuna que deseas colocar
@@ -133,13 +134,14 @@ public class Mascota {
     public void setDueño(ClienteFamilia dueño) {
         this.dueño = dueño;
     }
+    
 
     @Override
     public String toString() {
-        return "Mascota{" + "especie=" + especie + ", codigo=" + codigo + ", nombre=" + nombre + ", talla=" + talla + ", peso=" + peso + '}';
+        return nombre;
     }
     
-
+    //return "Mascota{" + "especie=" + especie + ", codigo=" + codigo + ", nombre=" + nombre + ", talla=" + talla + ", peso=" + peso + '}';
     
     
     

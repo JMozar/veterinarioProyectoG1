@@ -8,7 +8,6 @@ public class InyeccionVacuna {
     private static int contador;
     private int codigo;
     private int nroVacuna;
-    private String tipoVacuna;
     private String fecha;     //CAMBIAR A DATE
     private Mascota mascota;
     private Empleado empleado;
@@ -19,11 +18,10 @@ public class InyeccionVacuna {
     //agregar vacuna
     //agregar empleado
 
-    public InyeccionVacuna(int nroVacuna, String tipoVacuna, String fecha, Mascota mascota, Empleado empleado) {
+    public InyeccionVacuna(int nroVacuna, String fecha, Mascota mascota, Empleado empleado) {
         this.codigo = contador;
         contador++;
         this.nroVacuna = nroVacuna;
-        this.tipoVacuna = tipoVacuna;
         this.fecha = fecha;
         this.mascota = mascota;
         this.empleado = empleado;
@@ -52,6 +50,22 @@ public class InyeccionVacuna {
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
+
+    public int getNroVacuna() {
+        return nroVacuna;
+    }
+
+    public void setNroVacuna(int nroVacuna) {
+        this.nroVacuna = nroVacuna;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
     
     
     /*
@@ -62,6 +76,6 @@ public class InyeccionVacuna {
 
     @Override
     public String toString() {
-        return "InyeccionVacuna{" + "codigo=" + codigo + ", nroVacuna=" + nroVacuna + ", tipoVacuna=" + tipoVacuna + ", fecha=" + fecha + ", mascota=" + mascota + ", empleado=" + empleado.getNombre()+" "+empleado.getApellido()+ '}';
+        return "InyeccionVacuna{" + "codigo=" + codigo + ", nroVacuna=" + nroVacuna  + ", fecha=" + fecha + ", mascota=" + mascota + ", empleado=" + empleado.getNombre()+" "+empleado.getApellido()+ '}';
     }
 }

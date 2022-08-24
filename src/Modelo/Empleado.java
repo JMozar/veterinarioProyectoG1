@@ -40,9 +40,25 @@ public class Empleado extends Persona {
     public void setSueldo(float sueldo) {
         this.sueldo = sueldo;
     }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    
     
     @Override
     public void validar(){
         
     }
+
+    @Override
+    public String toString() {
+        return nombre ;
+    }
+    
+    
 }

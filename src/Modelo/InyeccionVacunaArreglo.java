@@ -5,6 +5,8 @@ package Modelo;
 public class InyeccionVacunaArreglo {
     private InyeccionVacuna[] inyecciones;
     private int indice;
+    private final String[] cabecera =  {"CODIGO",
+                            "FECHA","N. VACUN.","MASCOTA", "EMPLEADO"};
     
     public InyeccionVacunaArreglo(int tamano) {
         this.inyecciones = new InyeccionVacuna[tamano];
@@ -30,6 +32,26 @@ public class InyeccionVacunaArreglo {
         }
         indice--;
 
+    }
+    public String[] getCabecera() {
+        return cabecera;
+    }
+    public boolean isVacio() {
+        return this.indice==0;
+    }
+    public Object[][] getDatos(){
+        Object resultado[][] = new Object[this.indice][5];
+        if(!isVacio()){
+            for(int indice = 0; indice< this.indice;indice++){
+                resultado[indice][0] = this.inyecciones[indice].getCodigo();
+                resultado[indice][1] = this.inyecciones[indice].getFecha();
+                resultado[indice][2] = this.inyecciones[indice].getNroVacuna();
+                resultado[indice][3] = this.inyecciones[indice].getMascota().getNombre();
+                resultado[indice][4] = this.inyecciones[indice].getEmpleado().getNombre();
+                
+            }
+        }
+        return resultado;
     }
     
     

@@ -69,6 +69,22 @@ public class ControladorMascota {
             }
         }
         );
+        this.vista.btnHistorialMedico.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int fila = vista.tblMascotasRepo.getSelectedRow();//seleccion de fila de la tabla 
+                if (fila == -1) {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar una mascota");
+                } else {
+                    int valor = Integer.parseInt(vista.tblMascotasRepo.getValueAt(fila, 0).toString());//codigo de mascota
+                    Mascota m= null;
+                    Repositorio.mascotas.devolverMascota(valor).mostrarHistorialmedico();
+                    m=Repositorio.mascotas.devolverMascota(valor);
+                    ControladorHistorialMedico controladorh = new ControladorHistorialMedico(new frmHistorialMedico(), m);
+                    controladorh.iniciar();
+                }
+            }
+        }
+        );
     }
 
     public void actualizarTabla() {

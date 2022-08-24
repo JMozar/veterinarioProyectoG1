@@ -47,7 +47,23 @@ public class ControladorPrincipal {
                 }
             }
         );
+        this.vista.btnEmpleados.addActionListener(new ActionListener(){
+            public void actionPerformed (ActionEvent e){
+                ControladorRegistrarEmpleados controlador = new ControladorRegistrarEmpleados (new frmEmpleado(), Repositorio.empleados);
+                controlador.iniciar();
+                vista.dispose();
+                }
+            }
+        );
         
+        this.vista.btnInyeccion.addActionListener(new ActionListener(){
+            public void actionPerformed (ActionEvent e){
+                ControladorInyeccionVacuna controlador = new ControladorInyeccionVacuna (new frmInyeccionVacuna(), Repositorio.inyecciones);
+                controlador.iniciar();
+                vista.dispose();
+                }
+            }
+        );
 
     } 
     

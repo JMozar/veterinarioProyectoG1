@@ -40,9 +40,8 @@ public class frmMascota extends javax.swing.JFrame {
         txtRazaMascota = new javax.swing.JTextField();
         txtColorMascota = new javax.swing.JTextField();
         cmbEspecie = new javax.swing.JComboBox<>();
-        jButton4 = new javax.swing.JButton();
+        btnHistorialMedico = new javax.swing.JButton();
         btnRegistrar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMascotasRepo = new javax.swing.JTable();
@@ -88,8 +87,8 @@ public class frmMascota extends javax.swing.JFrame {
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 350, 250));
         jPanel1.getAccessibleContext().setAccessibleName("");
 
-        jButton4.setText("Historial Medico");
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, 140, -1));
+        btnHistorialMedico.setText("Historial Medico");
+        jPanel2.add(btnHistorialMedico, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 140, -1));
 
         btnRegistrar.setText("Registrar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
@@ -97,10 +96,7 @@ public class frmMascota extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 140, 30));
-
-        jButton2.setText("Vacunar");
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 160, -1));
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 140, 30));
 
         tblMascotasRepo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -175,11 +171,10 @@ public class frmMascota extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnHistorialMedico;
     public javax.swing.JButton btnRegistrar;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JComboBox<String> cmbEspecie;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
