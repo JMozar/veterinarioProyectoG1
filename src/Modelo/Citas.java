@@ -17,11 +17,11 @@ public class Citas {
 
     private Empleado empleado;
     private Mascota mascota;
-    private ClienteFamilia familia;
+    
     private float registroTalla;
     private float registroPeso;
 
-    public Citas (String Fecha, String Diagnostico, String Tratamiento, Empleado empleado, Mascota mascota, ClienteFamilia familia, float talla, float peso) {
+    public Citas (String Fecha, String Diagnostico, String Tratamiento, Empleado empleado, Mascota mascota, float talla, float peso) {
         this.codigo=contador;
         contador++;
         
@@ -30,7 +30,7 @@ public class Citas {
         this.Tratamiento = Tratamiento;
         this.empleado = empleado;
         this.mascota = mascota;
-        this.familia = familia;
+        
         modificarPesoMascota(peso);
         modificarTallaMascota(talla);
         registroTalla=peso;
@@ -88,7 +88,7 @@ public class Citas {
                 Diagnostico + ", \nTratamiento=" + Tratamiento +  
                 ", \nPeso=" + registroPeso + ", Talla=" + registroTalla + 
                 ", \nEmpleado=" + empleado.getNombre()+" "+empleado.getApellido() + 
-                ", Mascota=" + mascota + ", familia=" + familia +"\n"+ '}';
+                ", Mascota=" + mascota  +"\n"+ '}';
     }
     
 }

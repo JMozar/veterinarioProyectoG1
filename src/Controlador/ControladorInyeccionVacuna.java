@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
+    
 public class ControladorInyeccionVacuna {
     private frmInyeccionVacuna vista;
     private InyeccionVacunaArreglo modelo;

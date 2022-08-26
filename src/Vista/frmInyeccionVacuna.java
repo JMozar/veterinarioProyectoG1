@@ -57,9 +57,21 @@ public class frmInyeccionVacuna extends javax.swing.JFrame {
 
         jLabel5.setText("Empleado");
 
+        txtFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFechaActionPerformed(evt);
+            }
+        });
+
         cmbMascotas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         cmbEmpleados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        txtNumVacuna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumVacunaActionPerformed(evt);
+            }
+        });
 
         btnVacunasCalendario.setText("CalendarioVacuna");
 
@@ -206,6 +218,14 @@ public class frmInyeccionVacuna extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaActionPerformed
+
+    private void txtNumVacunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumVacunaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNumVacunaActionPerformed
 
     /**
      * @param args the command line arguments
