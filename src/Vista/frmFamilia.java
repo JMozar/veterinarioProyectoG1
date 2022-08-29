@@ -111,14 +111,14 @@ public class frmFamilia extends javax.swing.JFrame {
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Nro. de integrantes: ");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 120, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 136, 120, 30));
 
         txtNroIntegrantes.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jPanel2.add(txtNroIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 58, -1));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("Nro. de Mascotas:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 113, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 186, 113, 20));
 
         txtNroMascotas.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jPanel2.add(txtNroMascotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 56, -1));

@@ -26,18 +26,37 @@ public class ControladorFamilias {
                     JOptionPane.showMessageDialog(null, "Complete todos los campos");
                 } else {
                     
-                    ClienteFamilia f = new ClienteFamilia(Integer.parseInt(vista.txtNroIntegrantes.getText()), 
+                    //validar el ingreso de datos numericos (pendiente)
+                    
+                    /*
+                    if(vista.txtNroIntegrantes.getText().isEmpty() || vista.txtNroMascotas.getText().isEmpty() ||
+                            vista.txtCtaB.getText().isEmpty()|| vista.txtCel.getText().isEmpty()){
+                        JOptionPane.showMessageDialog(null, "Ingrese correctamente los datos.");
+                    }*/
+                    //else{
+                        ClienteFamilia f = new ClienteFamilia(Integer.parseInt(vista.txtNroIntegrantes.getText()), 
                         Integer.parseInt(vista.txtNroMascotas.getText()), vista.txtApellido.getText(), 
                         vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
-                    //Agregamos las familia al repo
-                    Repositorio.familias.agregar(f);
+                        //Agregamos las familia al repo
+                        Repositorio.familias.agregar(f);
 
-                    System.out.println("FAMILIA AGREGADA");
-                    JOptionPane.showMessageDialog(null, "Familia Agregada");
-                    JOptionPane.showMessageDialog(null, f.toString());
-                    //Actualizar tabla
-                    actualizarTabla();
-                    System.out.println(Repositorio.familias.toString());//familias que estan en repo
+                        System.out.println("FAMILIA AGREGADA");
+                        JOptionPane.showMessageDialog(null, "Familia Agregada");
+                        JOptionPane.showMessageDialog(null, f.toString());
+                        //Actualizar tabla
+                        actualizarTabla();
+                        System.out.println(Repositorio.familias.toString());//familias que estan en repo
+                        
+                        vista.txtApellido.setText("");
+                        vista.txtCtaB.setText("");
+                        vista.txtDireccion.setText("");
+                        vista.txtNroIntegrantes.setText("");
+                        vista.txtNroMascotas.setText("");
+                        vista.txtCel.setText("");
+                    //}
+                    
+                    
+                    
                 }
             }
         }
