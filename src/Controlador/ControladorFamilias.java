@@ -55,8 +55,6 @@ public class ControladorFamilias {
                         vista.txtCel.setText("");
                     //}
                     
-                    
-                    
                 }
             }
         }
@@ -71,6 +69,29 @@ public class ControladorFamilias {
             }
         }
         );
+                
+        this.vista.btnMascota.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
+                
+                ControladorIntegrantesFamilia controlador = new ControladorIntegrantesFamilia( new frmIntegrantesFamilia(), Repositorio.familias);
+                controlador.iniciar();
+                
+
+            }
+        }
+        );
+        
+        this.vista.btnIntegrantes.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
+                
+                
+
+            }
+        }
+        );
+        
         this.vista.btnEliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
@@ -89,7 +110,6 @@ public class ControladorFamilias {
             }
         }
         );
-
     }
     
     public void actualizarTabla() {
