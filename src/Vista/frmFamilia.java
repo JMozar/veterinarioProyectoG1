@@ -28,6 +28,13 @@ public class frmFamilia extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblFamiliaRepo = new javax.swing.JTable();
+        jPanel5 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnIntegrantes = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -46,15 +53,39 @@ public class frmFamilia extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         btnCancelar = new javax.swing.JButton();
         btnGuardarFamilia = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblFamiliaRepo.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tblFamiliaRepo);
+
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 790, 300));
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setText("Mascotas");
+        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 140, -1));
+
+        btnEliminar.setText("Eliminar");
+        jPanel5.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, -1, -1));
+
+        btnIntegrantes.setText("Integrantes");
+        jPanel5.add(btnIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 140, -1));
+
+        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 790, 50));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -76,24 +107,24 @@ public class frmFamilia extends javax.swing.JFrame {
                 txtApellidoActionPerformed(evt);
             }
         });
-        jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 150, -1));
+        jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 150, -1));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Nro. de integrantes: ");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 120, -1));
 
         txtNroIntegrantes.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtNroIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 58, -1));
+        jPanel2.add(txtNroIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 58, -1));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText("Nro. de Mascotas:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 113, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 113, -1));
 
         txtNroMascotas.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtNroMascotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 56, -1));
+        jPanel2.add(txtNroMascotas, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 56, -1));
 
         txtCtaB.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        jPanel2.add(txtCtaB, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 150, -1));
+        jPanel2.add(txtCtaB, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 150, -1));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText("Nro. Cta. Bancaria");
@@ -109,20 +140,19 @@ public class frmFamilia extends javax.swing.JFrame {
                 txtDireccionActionPerformed(evt);
             }
         });
-        jPanel2.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 150, -1));
+        jPanel2.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 150, -1));
 
         jLabel8.setText("Celular:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
-        jPanel2.add(txtCel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 140, -1));
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jPanel2.add(txtCel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 140, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 300, 260));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 300, 280));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 330));
-
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCancelar.setText("Eliminar");
-        jPanel3.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 130, 30));
+        btnCancelar.setText("Cancelar");
+        jPanel3.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 110, 30));
 
         btnGuardarFamilia.setText("Guardar");
         btnGuardarFamilia.addActionListener(new java.awt.event.ActionListener() {
@@ -130,35 +160,13 @@ public class frmFamilia extends javax.swing.JFrame {
                 btnGuardarFamiliaActionPerformed(evt);
             }
         });
-        jPanel3.add(btnGuardarFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 150, 30));
+        jPanel3.add(btnGuardarFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, 30));
 
-        jButton1.setText("Integrantes");
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 140, -1));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 300, 50));
 
-        jButton2.setText("Mascotas");
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 140, -1));
+        jPanel4.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 410));
 
-        jButton3.setText("Cancelar");
-        jPanel3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 130, -1));
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 820, 50));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        jPanel4.add(jScrollPane1);
-
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 470, 320));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1180, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -212,10 +220,10 @@ public class frmFamilia extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnGuardarFamilia;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnIntegrantes;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -227,8 +235,9 @@ public class frmFamilia extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable tblFamiliaRepo;
     public javax.swing.JTextField txtApellido;
     public javax.swing.JTextField txtCel;
     public javax.swing.JTextField txtCtaB;

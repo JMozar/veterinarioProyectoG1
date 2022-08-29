@@ -5,6 +5,8 @@ package Modelo;
 public class ClienteFamiliaArreglo {
     private ClienteFamilia[] ClienteFamilia;
     private int indice;
+    private final String[] cabecera =  {"CODIGO","APELLIDO FAMILIA","NRO CUENTA BANCARIA",
+                            "DIRECCION", "TELÉFONO", "NRO DE INTEGRANTES", "NRO MASCOTAS"};
     
     public ClienteFamiliaArreglo(int tamano) {
         this.ClienteFamilia = new ClienteFamilia[tamano];
@@ -34,6 +36,50 @@ public class ClienteFamiliaArreglo {
     
     public ClienteFamilia[] devolverIntegrantes(){
         return this.ClienteFamilia;
+    }
+    
+    public String[] getCabecera() {
+        return cabecera;
+    }
+    
+    public boolean isVacio() {
+        return this.indice==0;
+    }
+    
+    public Object[][] getDatos(){
+        Object resultado[][] = new Object[this.indice][8];
+        if(!isVacio()){
+            for(int indice = 0; indice< this.indice;indice++){
+                resultado[indice][0] = this.ClienteFamilia[indice].getCodigo();
+                resultado[indice][1] = this.ClienteFamilia[indice].getApellido_Familia();
+                resultado[indice][2] = this.ClienteFamilia[indice].getNum_Ctab();
+                resultado[indice][3] = this.ClienteFamilia[indice].getDireccion();
+                resultado[indice][4] = this.ClienteFamilia[indice].getTelefono();
+                //resultado[indice][5] = this.ClienteFamilia[indice].getColorPelo();
+                //resultado[indice][6] = this.ClienteFamilia[indice].getTalla();
+                //resultado[indice][7] = this.ClienteFamilia[indice].getPeso();
+            }
+        }
+        return resultado;
+    }
+    //devolver familia a partir de su codigo
+    public ClienteFamilia devolverFamilia(int codigo) {
+        ClienteFamilia resultado = null;
+         for(int i=0; i < ClienteFamilia.length; i++){
+            if( codigo==this.ClienteFamilia[i].getCodigo() ) {
+                resultado = this.ClienteFamilia[i];
+                break;
+            }
+        }
+        return resultado;
+    }
+    //para el combobox de familia
+    public boolean vacio(){
+        if(this.indice==0){
+            return true;
+        }else{
+            return false;
+        }
     }
     
     

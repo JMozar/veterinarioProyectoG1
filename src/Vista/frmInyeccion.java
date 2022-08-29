@@ -16,7 +16,6 @@ public class frmInyeccion extends javax.swing.JFrame {
      */
     public frmInyeccion() {
         initComponents();
-        this.setLocationRelativeTo(null); 
     }
 
     /**

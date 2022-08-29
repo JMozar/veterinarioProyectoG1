@@ -16,7 +16,6 @@ public class frmSistema extends javax.swing.JFrame {
      */
     public frmSistema() {
         initComponents();
-        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class ControladorFamilias {
 
@@ -19,15 +20,25 @@ public class ControladorFamilias {
 
         this.vista.btnGuardarFamilia.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //comienza
-
-                ClienteFamilia f = new ClienteFamilia(Integer.parseInt(vista.txtNroIntegrantes.getText()), Integer.parseInt(vista.txtNroMascotas.getText()), vista.txtApellido.getText(), vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
-                System.out.println("FAMILIA AGREGADA ");
-                //lo agregamos al repositorio
-                Repositorio.familias.agregar(f);
                 
-                JOptionPane.showMessageDialog(null, "Familia Agregada ");
-                JOptionPane.showMessageDialog(null, f.toString());
+                if (vista.txtNroIntegrantes.getText().isEmpty() || vista.txtNroMascotas.getText().isEmpty() ||
+                vista.txtApellido.getText().isEmpty() || vista.txtCtaB.getText().isEmpty() || vista.txtDireccion.getText().isEmpty() || vista.txtCel.getText().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Complete todos los campos");
+                } else {
+                    
+                    ClienteFamilia f = new ClienteFamilia(Integer.parseInt(vista.txtNroIntegrantes.getText()), 
+                        Integer.parseInt(vista.txtNroMascotas.getText()), vista.txtApellido.getText(), 
+                        vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
+                    //Agregamos las familia al repo
+                    Repositorio.familias.agregar(f);
+
+                    System.out.println("FAMILIA AGREGADA");
+                    JOptionPane.showMessageDialog(null, "Familia Agregada");
+                    JOptionPane.showMessageDialog(null, f.toString());
+                    //Actualizar tabla
+                    actualizarTabla();
+                    System.out.println(Repositorio.familias.toString());//familias que estan en repo
+                }
             }
         }
         );
@@ -41,8 +52,33 @@ public class ControladorFamilias {
             }
         }
         );
+        this.vista.btnEliminar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
+                
+                //eliminar
+                if (fila == -1) {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar una mascota");
+                } else {
+                    int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de familia
+                    Repositorio.familias.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
+                    actualizarTabla();//actualizamos
+                    System.out.println(Repositorio.familias.toString());//familias que estan en repo
+                    JOptionPane.showMessageDialog(null, "Familia Eliminada");
+                }
+
+            }
+        }
+        );
 
     }
+    
+    public void actualizarTabla() {
+        //lo del jtable
+        DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
+        this.vista.tblFamiliaRepo.setModel(modelotabla);
+    }
+    
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
