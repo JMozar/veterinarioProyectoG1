@@ -10,9 +10,9 @@ import javax.swing.table.DefaultTableModel;
 
 public class ControladorMascotasFamilia {
     private frmMascotasFamilia vista;
-    private MascotaArreglo modelo;
+    private Mascota modelo;
     
-    public ControladorMascotasFamilia (frmMascotasFamilia vista, MascotaArreglo modelo){
+    public ControladorMascotasFamilia (frmMascotasFamilia vista, Mascota modelo){
         this.vista = vista;
         this.modelo = modelo;
         
@@ -52,8 +52,8 @@ public class ControladorMascotasFamilia {
     
     public void actualizarTabla() {
         //lo del jtable
-        DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
-        this.vista.tblMascotasFamilia.setModel(modelotabla);
+        //DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
+        //this.vista.tblMascotasFamilia.setModel(modelotabla);
     }
     
     public void iniciar() {

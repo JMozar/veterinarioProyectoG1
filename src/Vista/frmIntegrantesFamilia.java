@@ -30,8 +30,6 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtIntegrantesFamilia = new javax.swing.JTextArea();
         btnRegresar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -52,12 +50,6 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
             }
         });
         jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 130, 40));
-
-        txtIntegrantesFamilia.setColumns(20);
-        txtIntegrantesFamilia.setRows(5);
-        jScrollPane1.setViewportView(txtIntegrantesFamilia);
-
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 410, 100));
 
         btnRegresar.setText("Regresar");
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +80,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblIntegrantesFamilia);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 410, 180));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, 370));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 470, 470));
 
@@ -151,9 +143,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
     public javax.swing.JButton btnRegresar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTable tblIntegrantesFamilia;
-    public javax.swing.JTextArea txtIntegrantesFamilia;
     // End of variables declaration//GEN-END:variables
 }
