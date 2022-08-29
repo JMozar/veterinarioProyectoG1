@@ -23,8 +23,6 @@ public class ControladorHistorialMedico {
         );
         
     }
-
-    
     
     public void mostrarHistorial(){
         this.vista.txtAreaHistorial.setText(modelo.mostrarHistorialmedico()+
