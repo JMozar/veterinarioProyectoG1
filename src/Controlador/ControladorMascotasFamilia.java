@@ -9,9 +9,9 @@ import javax.swing.table.DefaultTableModel;
 
 public class ControladorMascotasFamilia {
     private frmMascotasFamilia vista;
-    private ClienteFamilia modelo;
+    private MascotaArreglo modelo;
     
-    public ControladorMascotasFamilia (frmMascotasFamilia vista, ClienteFamilia modelo){
+    public ControladorMascotasFamilia (frmMascotasFamilia vista, MascotaArreglo modelo){
         this.vista = vista;
         this.modelo = modelo;
         
@@ -37,8 +37,18 @@ public class ControladorMascotasFamilia {
         );
     }
     
+    public void actualizarTabla() {
+        //lo del jtable
+        DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
+        this.vista.tblMascotasFamilia.setModel(modelotabla);
+    }
+    
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
+        
+        actualizarTabla();
+        System.out.println(Repositorio.mascotas.toString());
     }
+    
 }

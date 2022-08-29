@@ -14,6 +14,20 @@ public class ControladorIntegrantesFamilia {
         this.vista = vista;
         this.modelo = modelo;
         
+        this.vista.btnAgregar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        }
+        );
+        
+        this.vista.btnEliminar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        }
+        );
+        
         this.vista.btnRegresar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 vista.dispose();

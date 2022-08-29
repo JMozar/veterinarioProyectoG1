@@ -8,6 +8,8 @@ public class ClienteFamilia {
     private String Num_Ctab;
     private String Direccion;
     private String telefono;
+    private int numeroIntegrantes;
+    private int numeroMascotas;
 
     private ClientePersonaArreglo integrantesFamilia; //una familia esta compuesta por varias personas
     private MascotaArreglo mascotasFamilia;//los clientes tienen varias mascotas
@@ -20,6 +22,9 @@ public class ClienteFamilia {
         this.Num_Ctab = Num_Ctab;
         this.Direccion = Direccion;
         this.telefono = telefono;
+        this.numeroIntegrantes = numeroIntegrantes;
+        this.numeroMascotas = numeroMascotas;
+        
         this.integrantesFamilia = new ClientePersonaArreglo(numeroIntegrantes);//2
         this.mascotasFamilia = new MascotaArreglo(numeroMascotas);
         
@@ -66,6 +71,22 @@ public class ClienteFamilia {
         this.telefono = telefono;
     }
 
+    public int getNumeroIntegrantes() {
+        return numeroIntegrantes;
+    }
+
+    public void setNumeroIntegrantes(int numeroIntegrantes) {
+        this.numeroIntegrantes = numeroIntegrantes;
+    }
+
+    public int getNumeroMascotas() {
+        return numeroMascotas;
+    }
+
+    public void setNumeroMascotas(int numeroMascotas) {
+        this.numeroMascotas = numeroMascotas;
+    }
+    
     //Administrar INTEGRANTES de la familia
     //Agregar integrantes
     public void AñadirPersonas(ClientePersona ClientePersona) {

@@ -20,21 +20,13 @@ public class ControladorFamilias {
 
         this.vista.btnGuardarFamilia.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                
+                int numIntegrantes;
                 if (vista.txtNroIntegrantes.getText().isEmpty() || vista.txtNroMascotas.getText().isEmpty() ||
                 vista.txtApellido.getText().isEmpty() || vista.txtCtaB.getText().isEmpty() || vista.txtDireccion.getText().isEmpty() || vista.txtCel.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Complete todos los campos");
                 } else {
-                    
-                    //validar el ingreso de datos numericos (pendiente)
-                    
-                    /*
-                    if(vista.txtNroIntegrantes.getText().isEmpty() || vista.txtNroMascotas.getText().isEmpty() ||
-                            vista.txtCtaB.getText().isEmpty()|| vista.txtCel.getText().isEmpty()){
-                        JOptionPane.showMessageDialog(null, "Ingrese correctamente los datos.");
-                    }*/
-                    //else{
-                        ClienteFamilia f = new ClienteFamilia(Integer.parseInt(vista.txtNroIntegrantes.getText()), 
+                        numIntegrantes = Integer.parseInt(vista.txtNroIntegrantes.getText());
+                        ClienteFamilia f = new ClienteFamilia( numIntegrantes, 
                         Integer.parseInt(vista.txtNroMascotas.getText()), vista.txtApellido.getText(), 
                         vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
                         //Agregamos las familia al repo
@@ -42,7 +34,7 @@ public class ControladorFamilias {
 
                         System.out.println("FAMILIA AGREGADA");
                         JOptionPane.showMessageDialog(null, "Familia Agregada");
-                        JOptionPane.showMessageDialog(null, f.toString());
+                        
                         //Actualizar tabla
                         actualizarTabla();
                         System.out.println(Repositorio.familias.toString());//familias que estan en repo
@@ -53,8 +45,7 @@ public class ControladorFamilias {
                         vista.txtNroIntegrantes.setText("");
                         vista.txtNroMascotas.setText("");
                         vista.txtCel.setText("");
-                    //}
-                    
+                                       
                 }
             }
         }
@@ -113,7 +104,7 @@ public class ControladorFamilias {
                 
                 //eliminar
                 if (fila == -1) {
-                    JOptionPane.showMessageDialog(null, "Debe seleccionar una mascota");
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar una familia");
                 } else {
                     int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de familia
                     Repositorio.familias.eliminar(valor);//metodo para eliminar(de un arreglo de familias)

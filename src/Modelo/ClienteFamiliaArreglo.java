@@ -55,9 +55,8 @@ public class ClienteFamiliaArreglo {
                 resultado[indice][2] = this.ClienteFamilia[indice].getNum_Ctab();
                 resultado[indice][3] = this.ClienteFamilia[indice].getDireccion();
                 resultado[indice][4] = this.ClienteFamilia[indice].getTelefono();
-                //resultado[indice][5] = this.ClienteFamilia[indice].getColorPelo();
-                //resultado[indice][6] = this.ClienteFamilia[indice].getTalla();
-                //resultado[indice][7] = this.ClienteFamilia[indice].getPeso();
+                resultado[indice][5] = this.ClienteFamilia[indice].getNumeroIntegrantes();
+                resultado[indice][6] = this.ClienteFamilia[indice].getNumeroMascotas();
             }
         }
         return resultado;
