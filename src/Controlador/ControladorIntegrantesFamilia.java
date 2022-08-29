@@ -13,6 +13,7 @@ public class ControladorIntegrantesFamilia {
     public ControladorIntegrantesFamilia (frmIntegrantesFamilia vista, ClienteFamilia modelo){
         this.vista = vista;
         this.modelo = modelo;
+        
         this.vista.btnRegresar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 vista.dispose();
