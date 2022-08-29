@@ -32,7 +32,7 @@ public class frmFamilia extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblFamiliaRepo = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btnMascota = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnIntegrantes = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -76,14 +76,14 @@ public class frmFamilia extends javax.swing.JFrame {
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("Mascotas");
-        jPanel5.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 140, -1));
+        btnMascota.setText("Mascotas");
+        jPanel5.add(btnMascota, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 140, -1));
 
         btnEliminar.setText("Eliminar");
-        jPanel5.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, -1, -1));
+        jPanel5.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(643, 10, 140, -1));
 
         btnIntegrantes.setText("Integrantes");
-        jPanel5.add(btnIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 140, -1));
+        jPanel5.add(btnIntegrantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 140, -1));
 
         jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 790, 50));
 
@@ -222,8 +222,8 @@ public class frmFamilia extends javax.swing.JFrame {
     public javax.swing.JButton btnCancelar;
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnGuardarFamilia;
-    private javax.swing.JButton btnIntegrantes;
-    private javax.swing.JButton jButton2;
+    public javax.swing.JButton btnIntegrantes;
+    public javax.swing.JButton btnMascota;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

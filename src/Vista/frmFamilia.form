@@ -76,13 +76,16 @@
             <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="btnMascota">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Mascotas"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="390" y="10" width="140" height="-1"/>
+                  <AbsoluteConstraints x="330" y="10" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -95,7 +98,7 @@
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="710" y="10" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="643" y="10" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -103,9 +106,12 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Integrantes"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="550" y="10" width="140" height="-1"/>
+                  <AbsoluteConstraints x="490" y="10" width="140" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>

@@ -72,12 +72,7 @@ public class ControladorFamilias {
                 
         this.vista.btnMascota.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
                 
-                ControladorIntegrantesFamilia controlador = new ControladorIntegrantesFamilia( new frmIntegrantesFamilia(), Repositorio.familias);
-                controlador.iniciar();
-                
-
             }
         }
         );
@@ -85,7 +80,17 @@ public class ControladorFamilias {
         this.vista.btnIntegrantes.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
-                
+                if (fila == -1) {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar una familia");
+                } else {
+                    int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de mascota
+                    ClienteFamilia f= null;
+                    Repositorio.familias.devolverFamilia(valor);
+                    
+                    f=Repositorio.familias.devolverFamilia(valor);
+                    ControladorIntegrantesFamilia controladorh = new ControladorIntegrantesFamilia(new frmIntegrantesFamilia(), f);
+                    controladorh.iniciar();
+                }
                 
 
             }
