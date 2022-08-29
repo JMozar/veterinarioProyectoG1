@@ -22,7 +22,7 @@ public class Main {
         ClientePersona persona1 = new ClientePersona("dx","Salazar","123",978978978);
         ClientePersona persona2 = new ClientePersona("Antonio","Zeta","122",954545454);
         Repositorio.personas.agregar(persona1);
-        Repositorio.personas.agregar(persona1);
+        Repositorio.personas.agregar(persona2);
         //Creamos empleados
         Empleado empleado1= new Empleado("Veterinario",1200, "Juan", "Perez", "88888888", 912345678);
         Repositorio.empleados.agregar(empleado1);//si no hay empleados sale error
@@ -89,26 +89,28 @@ public class Main {
         
         System.out.println(mascota1.toString());
         System.out.println("Prueba cita");
-        //Citas cita1=new Citas("Hoy","Diagnostico1","Tratamiento2",empleado1,mascota1,familia1,100,100);
+        Citas cita1=new Citas("Hoy","Diagnostico1","Tratamiento2",empleado1,mascota1,100,100);
         
-        //añadir cita a historial medico de animal
-        
-        //mascota1.registrarCitaHistorial(cita1);
+        mascota1.registrarCitaHistorial(cita1);
         mascota1.setPeso(100);
         mascota1.setTalla(100);
+        Repositorio.citas.agregar(cita1);
+        
         System.out.println(mascota1.toString());
         
         //mostramos de nuevo el historial
         System.out.println(mascota1.mostrarHistorialmedico());
         //Agregamos una segunda cita
-        //Citas cita2=new Citas("Mañana","Diagnostico2","Tratamiento3",empleado1,mascota1,familia1,300,200);
-        //mascota1.registrarCitaHistorial(cita2);
+        Citas cita2=new Citas("Mañana","Diagnostico2","Tratamiento3",empleado1,mascota1,300,200);
+        mascota1.registrarCitaHistorial(cita2);
         System.out.println(mascota1.mostrarHistorialmedico());
+        Repositorio.citas.agregar(cita2);
         
         //Agregamos una inyeccion a la mascota
         InyeccionVacuna inyeccion1 = new InyeccionVacuna(1,"Lunes",mascota1,empleado1);
         InyeccionVacuna inyeccion2 = new InyeccionVacuna(2,"Martes",mascota1,empleado1);
         Repositorio.inyecciones.agregar(inyeccion1);
+        Repositorio.inyecciones.agregar(inyeccion2);
         mascota1.registrarInyeccionHistorial(inyeccion1);
         mascota1.registrarInyeccionHistorial(inyeccion2);
         System.out.println(mascota1.mostrarHistorialmedico());

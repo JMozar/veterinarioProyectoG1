@@ -32,6 +32,8 @@ public class ControladorVacunasCalendario {
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
+        this.vista.lblNombreMascota.setText(modelo.getNombre());
+        this.vista.txtAreaVacunasCalendario.setEditable(false);
         mostrarHistorial();
     }
 }

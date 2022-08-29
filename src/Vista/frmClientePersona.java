@@ -37,13 +37,13 @@ public class frmClientePersona extends javax.swing.JFrame {
         lblDNIPersona = new javax.swing.JTextField();
         lblTelefonoPersona = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        btnCancelarRP = new javax.swing.JButton();
-        btnRegistrarRP = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnRegistrar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblPersonasRepo = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -72,19 +72,19 @@ public class frmClientePersona extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnCancelarRP.setText("Cancelar");
-        jPanel2.add(btnCancelarRP, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 160, 40));
+        btnCancelar.setText("Cancelar");
+        jPanel2.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 160, 40));
 
-        btnRegistrarRP.setText("Registrar");
-        jPanel2.add(btnRegistrarRP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 40));
+        btnRegistrar.setText("Registrar");
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 160, 40));
 
-        jButton1.setText("Eliminar");
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 150, 40));
+        btnEliminar.setText("Eliminar");
+        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 150, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 520, 60));
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 250));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblPersonasRepo.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -95,7 +95,7 @@ public class frmClientePersona extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblPersonasRepo);
 
         jPanel4.add(jScrollPane1);
 
@@ -140,9 +140,9 @@ public class frmClientePersona extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnCancelarRP;
-    public javax.swing.JButton btnRegistrarRP;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnCancelar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -152,10 +152,10 @@ public class frmClientePersona extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     public javax.swing.JTextField lblApellidoPersona;
     public javax.swing.JTextField lblDNIPersona;
     public javax.swing.JTextField lblNombrePersona;
     public javax.swing.JTextField lblTelefonoPersona;
+    public javax.swing.JTable tblPersonasRepo;
     // End of variables declaration//GEN-END:variables
 }

@@ -67,15 +67,9 @@ public class InyeccionVacuna {
         this.fecha = fecha;
     }
     
-    
-    /*
-    public void vacunarmascota(Mascota mascota, int numero){
-        mascota.vacunar(numero);
-    }
-    */
 
     @Override
     public String toString() {
-        return "InyeccionVacuna{" + "codigo=" + codigo + ", nroVacuna=" + nroVacuna  + ", fecha=" + fecha + ", mascota=" + mascota + ", empleado=" + empleado.getNombre()+" "+empleado.getApellido()+ '}';
+        return "Cod=" + codigo + ", nroVacuna=" + nroVacuna  + ", fecha=" + fecha + ", Empleado=" + empleado.getNombre()+" "+empleado.getApellido();
     }
 }

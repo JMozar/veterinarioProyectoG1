@@ -84,11 +84,11 @@ public class Citas {
     @Override
     public String toString() {
         
-        return "Citas{" + "Codigo=" + codigo + ", Fecha=" + Fecha + ", \nDiagnostico=" + 
-                Diagnostico + ", \nTratamiento=" + Tratamiento +  
-                ", \nPeso=" + registroPeso + ", Talla=" + registroTalla + 
-                ", \nEmpleado=" + empleado.getNombre()+" "+empleado.getApellido() + 
-                ", Mascota=" + mascota  +"\n"+ '}';
+        return  "Cod=" + codigo + ", Fecha=" + Fecha +", Peso=" + registroPeso + ", Talla=" + registroTalla + 
+                ", Empleado=" + empleado.getNombre()+" "+empleado.getApellido()+
+                ", \nDiagnostico=" + 
+                Diagnostico + ", \nTratamiento=" + Tratamiento   
+                ;
     }
     
 }

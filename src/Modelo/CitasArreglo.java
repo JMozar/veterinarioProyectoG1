@@ -37,7 +37,7 @@ public class CitasArreglo {
     public String toString() {
         String resultado = "";
         for(int i=0 ; i < this.indice; i++){
-            resultado = resultado + this.citas[i]+"\n";
+            resultado = resultado + this.citas[i]+"\n\n";
         }
         return resultado;
     }

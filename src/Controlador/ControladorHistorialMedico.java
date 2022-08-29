@@ -27,12 +27,14 @@ public class ControladorHistorialMedico {
     
     
     public void mostrarHistorial(){
-        this.vista.txtAreaHistorial.setText(modelo.mostrarHistorialmedico()+modelo.mostrarVacunas());
+        this.vista.txtAreaHistorial.setText(modelo.mostrarHistorialmedico()+
+                "Estado actual de las vacunas segun su calendario:"+modelo.mostrarVacunas());
     }
 
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
+        this.vista.txtAreaHistorial.setEditable(false);
         mostrarHistorial();
     }
 }

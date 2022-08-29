@@ -111,12 +111,12 @@ public class Vacuna {
     public String toString() {
         String datosVacuna="";
         if(recurrente==false){
-            datosVacuna= numVacuna + ".-medicamentos=" + medicamentos + ", dosis=" + dosis +
-                ", gramos=" + gramos + ", fechaVacunacion=" + fechaVacunacion +
-                ", estado=" + estadoVacuna()+"";
+            datosVacuna= numVacuna + ".-Medicamentos=" + medicamentos + ", Dosis=" + dosis +
+                ", Gramos=" + gramos + ", FechaVacunacion=" + fechaVacunacion +
+                ", Estado=" + estadoVacuna()+"";
         }else{
-            datosVacuna= numVacuna + ".-medicamentos=" + medicamentos +
-                ", gramos=" + gramos + ", fechaVacunacion=" + fechaVacunacion +
+            datosVacuna= numVacuna + ".-Medicamentos=" + medicamentos +
+                ", Gramos=" + gramos + ", FechaVacunacion=" + fechaVacunacion +
                 ", Veces aplicada="+vecesAplicadas;
         }
         return datosVacuna;

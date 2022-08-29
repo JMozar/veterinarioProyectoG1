@@ -15,7 +15,7 @@ public class ClientePersona extends Persona{
         contador++;
     }
 
-    //get y set que no dependen de otros objetos
+    
     public String getNombre() {
         return nombre;
     }
@@ -31,6 +31,26 @@ public class ClientePersona extends Persona{
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    
+    
+    
+    
     
     
     //

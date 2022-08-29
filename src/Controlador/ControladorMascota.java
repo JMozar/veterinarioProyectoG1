@@ -24,29 +24,26 @@ public class ControladorMascota {
             public void actionPerformed(ActionEvent e) {
                 //comienza
                 //Mascota mascota1 = new Mascota("Peque",especie1,"Mostaza","12-08-2018");
-                Mascota m = new Mascota(vista.txtNombreMascota.getText(), (Especie) vista.cmbEspecie.getSelectedItem(),
-                        vista.txtRazaMascota.getText(),
-                        vista.txtColorMascota.getText(), vista.txtFechaNacimientoMascota.getText());
-                //Agregamos las mascotas al repo
-                Repositorio.mascotas.agregar(m);
-                
-                System.out.println("MASCOTA AGREGADA");
-                JOptionPane.showMessageDialog(null, "Mascota Agregada");
-                JOptionPane.showMessageDialog(null, m.toString());
-                //Actualizar tabla
-                actualizarTabla();
-                System.out.println(Repositorio.mascotas.toString());//mascotas que estan en repo
+                if (vista.txtNombreMascota.getText().isEmpty() || vista.txtRazaMascota.getText().isEmpty()
+                        || vista.txtRazaMascota.getText().isEmpty() || vista.txtFechaNacimientoMascota.getText().isEmpty()
+                        ||vista.txtColorMascota.getText().isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Complete todos los campos");
+                } else {
+                    
+                    
+                    Mascota m = new Mascota(vista.txtNombreMascota.getText(), (Especie) vista.cmbEspecie.getSelectedItem(),
+                            vista.txtRazaMascota.getText(),
+                            vista.txtColorMascota.getText(), vista.txtFechaNacimientoMascota.getText());
+                    //Agregamos las mascotas al repo
+                    Repositorio.mascotas.agregar(m);
 
-            }
-        }
-        );
-        this.vista.btnRegresar.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-                ControladorPrincipal controlador = new ControladorPrincipal(new Usuario("admin", "123"), new frmPrincipal());
-                //en lugar de crear otro usuario debemos traerlo del repo
-                controlador.iniciar();
-                vista.dispose();
+                    System.out.println("MASCOTA AGREGADA");
+                    JOptionPane.showMessageDialog(null, "Mascota Agregada");
+                    JOptionPane.showMessageDialog(null, m.toString());
+                    //Actualizar tabla
+                    actualizarTabla();
+                    System.out.println(Repositorio.mascotas.toString());//mascotas que estan en repo
+                }
             }
         }
         );
@@ -85,6 +82,18 @@ public class ControladorMascota {
                 }
             }
         }
+        );
+        
+        this.vista.btnRegresar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                ControladorPrincipal controlador = new ControladorPrincipal(new Usuario("admin", "123"), new frmPrincipal());
+                //en lugar de crear otro usuario debemos traerlo del repo
+                controlador.iniciar();
+                vista.dispose();
+            }
+        }        
+                
         );
     }
 

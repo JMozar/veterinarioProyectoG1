@@ -5,6 +5,8 @@ public class ClientePersonaArreglo {
 
     private ClientePersona[] ClientePersonas;
     private int indice;
+    private final String[] cabecera =  {"CODIGO","NOMBRE",
+                            "APELLIDO","DNI", "TELEFONO"};
 
     public ClientePersonaArreglo(int tamano) {
         this.ClientePersonas = new ClientePersona[tamano];
@@ -34,6 +36,29 @@ public class ClientePersonaArreglo {
         }
         indice--;
 
+    }
+    public String[] getCabecera() {
+        return cabecera;
+    }
+    
+    public boolean isVacio() {
+        return this.indice==0;
+    }
+    
+    
+    
+    public Object[][] getDatos(){
+        Object resultado[][] = new Object[this.indice][7];
+        if(!isVacio()){
+            for(int indice = 0; indice< this.indice;indice++){
+                resultado[indice][0] = this.ClientePersonas[indice].getCodigo();
+                resultado[indice][1] = this.ClientePersonas[indice].getNombre();
+                resultado[indice][2] = this.ClientePersonas[indice].getApellido();
+                resultado[indice][3] = this.ClientePersonas[indice].getDNI();
+                resultado[indice][4] = this.ClientePersonas[indice].getTelefono();    
+            }
+        }
+        return resultado;
     }
 
     @Override

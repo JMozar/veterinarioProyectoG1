@@ -1,7 +1,7 @@
 package Modelo;
 
 public class CalendarioVacuna {
-
+    private int numVacunas;
     private Vacuna[] vacunas;
 
     private Especie especie;
@@ -21,6 +21,7 @@ public class CalendarioVacuna {
             //vacuna Anual
             this.vacunas[3] = new Vacuna(4,"Polivalente+Antirrabico", "10g", "Anualmente", 0);
             //(usamos contructores diferentes)
+            this.numVacunas=4;
         }
         if (especie.getNombreEspecie() == "Gato") {
             this.vacunas = new Vacuna[5];
@@ -30,10 +31,11 @@ public class CalendarioVacuna {
             this.vacunas[3] = new Vacuna(4,"Antirabica", "1", "10g", "8 meses");
             //Vacuna Anual
             this.vacunas[4]= new Vacuna(5,"Trivalente Felina + Antirrabico", "20g", "Anualmente", 0);
-
+            this.numVacunas=5;
         }
 
     }
+
 
     public Vacuna[] devolverVacunas(){
         return this.vacunas;
@@ -62,4 +64,13 @@ public class CalendarioVacuna {
             }
         return texto;
     }
+
+    public int getNumVacunas() {
+        return numVacunas;
+    }
+
+    public void setNumVacunas(int numVacunas) {
+        this.numVacunas = numVacunas;
+    }
+    
 }

@@ -50,8 +50,7 @@ public class Mascota {
     }
     
     public String mostrarVacunas(){
-        return "Estado de vacunas de "+this.nombre+": "+
-        vacunasDesignadas.CalendarioVacunas();
+        return vacunasDesignadas.CalendarioVacunas();
     }
     /*
     public void vacunar(int numeroVacuna){//el numero de la vacuna que deseas colocar
@@ -133,6 +132,14 @@ public class Mascota {
 
     public void setDueño(ClienteFamilia dueño) {
         this.dueño = dueño;
+    }
+
+    public CalendarioVacuna getVacunasDesignadas() {
+        return vacunasDesignadas;
+    }
+
+    public void setVacunasDesignadas(CalendarioVacuna vacunasDesignadas) {
+        this.vacunasDesignadas = vacunasDesignadas;
     }
     
 

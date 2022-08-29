@@ -25,33 +25,23 @@ public class HistorialMedico {
     public void añadirInyeccines(InyeccionVacuna inyeccion){
         this.inyecciones.agregar(inyeccion);
     }
-    /*
-    public void mostrarHistorialMedico(){
-        System.out.println("HOla");
-        System.out.println("Historial medico de  "+mascota.getNombre()+": ");
-        System.out.println("El dueño de esta mascota es: "+dueño.getApellido_Familia());
-        System.out.println(citas.toString());
-        //mostrar peso y talla actual
-        
-    }
-    /*/
+
     public String mostrarHistorial(){
-        return "HISTORIAL MEDICO DE "+mascota.getNombre()+": \n+"
-                + "El dueño de esta mascota es: "+mascota.getDueño().getApellido_Familia()+"\n"+
+        return  "El dueño de esta mascota es la familia : "+mascota.getDueño().getApellido_Familia()+"\n"+
                 "--------------------------------------------------------------------------"+"\n"+
-                mostrarCitasRegistradas()+"\n"+
+                mostrarCitasRegistradas()+
                 "--------------------------------------------------------------------------"+"\n"+
                 mostrarInyeccionesRegistradas()+
                 "--------------------------------------------------------------------------"+"\n";
     }
     
     public String mostrarCitasRegistradas(){
-        return "Citas de son :"+"\n"+
+        return "Registro de citas :"+"\n"+
         citas.toString();
     }
     
     public String mostrarInyeccionesRegistradas(){
-        return "Las inyecciones son :"+"\n"+
+        return "Registro de inyecciones :"+"\n"+
         inyecciones.toString();
     }  
 }
