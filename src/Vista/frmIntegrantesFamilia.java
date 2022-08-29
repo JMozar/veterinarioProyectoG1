@@ -88,7 +88,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblIntegrantesFamilia);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 410, 180));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 410, 180));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 470, 470));
 
@@ -153,7 +153,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tblIntegrantesFamilia;
+    public javax.swing.JTable tblIntegrantesFamilia;
     public javax.swing.JTextArea txtIntegrantesFamilia;
     // End of variables declaration//GEN-END:variables
 }

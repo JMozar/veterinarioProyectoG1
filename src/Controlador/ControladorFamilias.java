@@ -68,11 +68,10 @@ public class ControladorFamilias {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una familia");
                 } else {
                     int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de mascota
-                    ClienteFamilia f= null;
-                    Repositorio.familias.devolverFamilia(valor);
-                    
-                    f=Repositorio.familias.devolverFamilia(valor);
-                    ControladorIntegrantesFamilia controladorh = new ControladorIntegrantesFamilia(new frmIntegrantesFamilia(), f);
+                    Mascota f= null;
+                                        
+                    f=Repositorio.mascotas.devolverMascota(valor);
+                    ControladorMascotasFamilia controladorh = new ControladorMascotasFamilia(new frmMascotasFamilia(), f);
                     controladorh.iniciar();
                 }
             }

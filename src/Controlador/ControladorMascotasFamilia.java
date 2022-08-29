@@ -5,6 +5,7 @@ import Vista.*;
 import Datos.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class ControladorMascotasFamilia {
@@ -24,7 +25,19 @@ public class ControladorMascotasFamilia {
         
         this.vista.btnEliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                int fila = vista.tblMascotasFamilia.getSelectedRow();
                 
+                //eliminar
+                if (fila == -1) {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar una mascota");
+                } else {
+                    int valor = Integer.parseInt(vista.tblMascotasFamilia.getValueAt(fila, 0).toString());
+                    Repositorio.mascotas.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
+                    actualizarTabla();//actualizamos
+                    System.out.println(Repositorio.mascotas.toString());//familias que estan en repo
+                    JOptionPane.showMessageDialog(null, "Mascota Eliminada");
+                }
+
             }
         }
         );

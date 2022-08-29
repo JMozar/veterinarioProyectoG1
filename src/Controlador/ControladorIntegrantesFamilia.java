@@ -5,6 +5,8 @@ import Vista.*;
 import Datos.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class ControladorIntegrantesFamilia {
     private frmIntegrantesFamilia vista;
@@ -23,7 +25,19 @@ public class ControladorIntegrantesFamilia {
         
         this.vista.btnEliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                int fila = vista.tblIntegrantesFamilia.getSelectedRow();
                 
+                //eliminar
+                if (fila == -1) {
+                    JOptionPane.showMessageDialog(null, "Debe seleccionar una persona");
+                } else {
+                    int valor = Integer.parseInt(vista.tblIntegrantesFamilia.getValueAt(fila, 0).toString());
+                    Repositorio.familias.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
+                    actualizarTabla();//actualizamos
+                    System.out.println(Repositorio.familias.toString());//familias que estan en repo
+                    JOptionPane.showMessageDialog(null, "Persona eliminada");
+                }
+
             }
         }
         );
@@ -36,10 +50,17 @@ public class ControladorIntegrantesFamilia {
         );
     }
     
+    public void actualizarTabla() {
+        //lo del jtable
+        //DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
+        //this.vista.tblIntegrantesFamilia.setModel(modelotabla);
+    }
+    
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
-        //this.vista.txtAreaHistorial.setEditable(false);
-        //mostrarHistorial();
+        
+        actualizarTabla();
+        System.out.println(Repositorio.mascotas.toString());
     }
 }
