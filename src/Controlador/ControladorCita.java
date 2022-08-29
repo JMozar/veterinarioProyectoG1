@@ -50,7 +50,7 @@ public class ControladorCita {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar alguna Cita");
                 } else {
                     int valor = Integer.parseInt(vista.tblCitasRepo.getValueAt(fila, 0).toString());
-                    Repositorio.CitasArreglo.eliminar(valor);
+                    //Repositorio.CitasArreglo.eliminar(valor);
                     actualizarTabla();
                     System.out.println(Repositorio.citas.toString());                    
                 }
@@ -60,7 +60,7 @@ public class ControladorCita {
     }
        public void actualizarTabla() {
         //lo del jtable
-        DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
-        this.vista.tblCitasRepo.setModel(modelotabla);
+        //DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
+        //this.vista.tblCitasRepo.setModel(modelotabla);
     }  
 }

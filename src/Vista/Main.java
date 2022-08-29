@@ -10,6 +10,7 @@ import Controlador.*;
 
 public class Main {
     public static void main(String[] args) {
+        
         //Prueba
         //Creamos especies
         Especie especie1 = new Especie("Perro");
@@ -88,10 +89,11 @@ public class Main {
         
         System.out.println(mascota1.toString());
         System.out.println("Prueba cita");
-        Citas cita1=new Citas("Hoy","Diagnostico1","Tratamiento2",empleado1,mascota1,familia1,100,100);
+        //Citas cita1=new Citas("Hoy","Diagnostico1","Tratamiento2",empleado1,mascota1,familia1,100,100);
+        
         //añadir cita a historial medico de animal
         
-        mascota1.registrarCitaHistorial(cita1);
+        //mascota1.registrarCitaHistorial(cita1);
         mascota1.setPeso(100);
         mascota1.setTalla(100);
         System.out.println(mascota1.toString());
@@ -99,8 +101,8 @@ public class Main {
         //mostramos de nuevo el historial
         System.out.println(mascota1.mostrarHistorialmedico());
         //Agregamos una segunda cita
-        Citas cita2=new Citas("Mañana","Diagnostico2","Tratamiento3",empleado1,mascota1,familia1,300,200);
-        mascota1.registrarCitaHistorial(cita2);
+        //Citas cita2=new Citas("Mañana","Diagnostico2","Tratamiento3",empleado1,mascota1,familia1,300,200);
+        //mascota1.registrarCitaHistorial(cita2);
         System.out.println(mascota1.mostrarHistorialmedico());
         
         //Agregamos una inyeccion a la mascota

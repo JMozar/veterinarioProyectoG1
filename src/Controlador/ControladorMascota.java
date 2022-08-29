@@ -78,6 +78,7 @@ public class ControladorMascota {
                     int valor = Integer.parseInt(vista.tblMascotasRepo.getValueAt(fila, 0).toString());//codigo de mascota
                     Mascota m= null;
                     Repositorio.mascotas.devolverMascota(valor).mostrarHistorialmedico();
+                    
                     m=Repositorio.mascotas.devolverMascota(valor);
                     ControladorHistorialMedico controladorh = new ControladorHistorialMedico(new frmHistorialMedico(), m);
                     controladorh.iniciar();
