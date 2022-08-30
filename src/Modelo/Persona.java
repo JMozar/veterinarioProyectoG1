@@ -42,7 +42,5 @@ public abstract class Persona {
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }
-
-    public abstract void validar();
     
 }

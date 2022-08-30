@@ -36,7 +36,6 @@ public class ControladorRegistrarEmpleados {
                             Repositorio.empleados.agregar(em);
                             System.out.println("Empleado AGREGADO");
                             JOptionPane.showMessageDialog(null, "Empleado Agregada");
-                            JOptionPane.showMessageDialog(null, em.toString());
                             actualizarTabla();
                             limpiarCampos();
                         } catch (NumberFormatException ex1) {
@@ -67,10 +66,10 @@ public class ControladorRegistrarEmpleados {
                 if (fila == -1) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una empleado");
                 } else {
-                    int valor = Integer.parseInt(vista.tblEmpleadoRepo.getValueAt(fila, 0).toString());//codigo de mascota
-                    Repositorio.empleados.eliminar(valor);//metodo para eliminar(de un arreglo de mascotas)
+                    int valor = Integer.parseInt(vista.tblEmpleadoRepo.getValueAt(fila, 0).toString());//codigo de empleado
+                    Repositorio.empleados.eliminar(valor);//metodo para eliminar empleados
                     actualizarTabla();//actualizamos
-                    System.out.println(Repositorio.empleados.toString());//mascotas que estan en repo
+                    System.out.println("Empleado Eliminado");
                     JOptionPane.showMessageDialog(null, "Empleado Eliminado");
                 }
 
@@ -85,7 +84,6 @@ public class ControladorRegistrarEmpleados {
         this.vista.tblEmpleadoRepo.setModel(modelotabla);
     }
     public void limpiarCampos(){
-        //fecha talla peso diagnostico tratamiento
         this.vista.txtNombreEmpleado.setText("");
         this.vista.txtApellidoEmpleado.setText("");
         this.vista.txtDNIEmpleado.setText("");
@@ -98,6 +96,5 @@ public class ControladorRegistrarEmpleados {
         this.vista.setVisible(true);
         
         actualizarTabla();
-        System.out.println(Repositorio.personas.toString());//mascotas que estan en repo
     }
 }

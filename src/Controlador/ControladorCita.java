@@ -41,7 +41,6 @@ public class ControladorCita {
                             m.registrarCitaHistorial(c);
                             
                             JOptionPane.showMessageDialog(null, "Cita AGREGADA");
-                            JOptionPane.showMessageDialog(null, c.toString());
                             actualizarTabla();
                             limpiarCampos();
                         } else {
@@ -77,7 +76,8 @@ public class ControladorCita {
                     int valor = Integer.parseInt(vista.tblCitasRepo.getValueAt(fila, 0).toString());
                     Repositorio.citas.eliminar(valor);
                     actualizarTabla();
-                    System.out.println(Repositorio.citas.toString());
+                    System.out.println("Cita eliminada");
+                    JOptionPane.showMessageDialog(null, "Cita eliminada");
                 }
             }
         }
@@ -122,6 +122,5 @@ public class ControladorCita {
 
         //lo del jtable
         actualizarTabla();
-        System.out.println(Repositorio.inyecciones.toString());//inyecciones que estan en repo
     }
 }

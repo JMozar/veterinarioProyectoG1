@@ -60,7 +60,7 @@ public class ControladorMascota {
                     int valor = Integer.parseInt(vista.tblMascotasRepo.getValueAt(fila, 0).toString());//codigo de mascota
                     Repositorio.mascotas.eliminar(valor);//metodo para eliminar(de un arreglo de mascotas)
                     actualizarTabla();//actualizamos
-                    System.out.println(Repositorio.mascotas.toString());//mascotas que estan en repo
+                    System.out.println("Mascota Eliminada");//mascotas que estan en repo
                     JOptionPane.showMessageDialog(null, "Mascota Eliminada");
                 }
 
@@ -89,7 +89,6 @@ public class ControladorMascota {
             public void actionPerformed(ActionEvent e) {
 
                 ControladorPrincipal controlador = new ControladorPrincipal(Repositorio.usuario_validado, new frmPrincipal());
-                //en lugar de crear otro usuario debemos traerlo del repo
                 controlador.iniciar();
                 vista.dispose();
             }
@@ -104,7 +103,6 @@ public class ControladorMascota {
         this.vista.tblMascotasRepo.setModel(modelotabla);
     }
     public void limpiarCampos(){
-        //fecha talla peso diagnostico tratamiento
         this.vista.txtNombreMascota.setText("");
         this.vista.txtRazaMascota.setText("");
         this.vista.txtFechaNacimientoMascota.setText("");
@@ -129,6 +127,5 @@ public class ControladorMascota {
 
         //lo del jtable
         actualizarTabla();
-        System.out.println(Repositorio.mascotas.toString());//mascotas que estan en repo
     }
 }

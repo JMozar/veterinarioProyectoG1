@@ -22,7 +22,7 @@ public class ControladorInyeccionVacuna {
         this.vista.btnRegistrar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int numVacuna;
-                boolean valido = false;
+                
                 //comienza
                 //Mascota mascota1 = new Mascota("Peque",especie1,"Mostaza","12-08-2018");
                 if (vista.txtNumVacuna.getText().isEmpty() || vista.txtFecha.getText().isEmpty()) {
@@ -45,7 +45,6 @@ public class ControladorInyeccionVacuna {
 
                             System.out.println("Inyeccion AGREGADA");
                             JOptionPane.showMessageDialog(null, "Inyeccion AGREGADA");
-                            JOptionPane.showMessageDialog(null, i.toString());
                             //Actualizar tabla
                             actualizarTabla();
                             System.out.println(Repositorio.inyecciones.toString());//mascotas que estan en repo
@@ -54,7 +53,7 @@ public class ControladorInyeccionVacuna {
                         }
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(null, "Digite un numero en Num. vacuna");
-                        valido = false;
+                        
                     }
 
                 }
@@ -93,7 +92,7 @@ public class ControladorInyeccionVacuna {
                     int valor = Integer.parseInt(vista.tblInyeccionesRepo.getValueAt(fila, 0).toString());//codigo de mascota
                     Repositorio.inyecciones.eliminar(valor);//metodo para eliminar(de un arreglo de mascotas)
                     actualizarTabla();//actualizamos
-                    System.out.println(Repositorio.inyecciones.toString());//mascotas que estan en repo
+                    System.out.println("Inyeccion Eliminada");//mascotas que estan en repo
                     JOptionPane.showMessageDialog(null, "Inyeccion Eliminada");
                 }
 
@@ -131,6 +130,5 @@ public class ControladorInyeccionVacuna {
 
         //lo del jtable
         actualizarTabla();
-        System.out.println(Repositorio.inyecciones.toString());//mascotas que estan en repo
     }
 }

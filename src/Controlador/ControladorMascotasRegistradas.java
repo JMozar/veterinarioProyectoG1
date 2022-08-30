@@ -1,18 +1,11 @@
 
 package Controlador;
 
-import Datos.Repositorio;
-import Modelo.ClientePersona;
-import Modelo.ClientePersonaArreglo;
+
 import Modelo.MascotaArreglo;
-import Modelo.Usuario;
-import Vista.frmClientePersona;
 import Vista.frmMascotasRegistradas;
-import Vista.frmPersonasRegistradas;
-import Vista.frmPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -46,6 +39,5 @@ public class ControladorMascotasRegistradas {
         this.vista.setVisible(true);
 
         actualizarTabla();
-        System.out.println(Repositorio.mascotas.toString());//personas que estan en repo
     }
 }

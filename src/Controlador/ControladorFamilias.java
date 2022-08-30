@@ -5,7 +5,6 @@ import Vista.*;
 import Datos.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -119,7 +118,7 @@ public class ControladorFamilias {
                     int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de familia
                     Repositorio.familias.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
                     actualizarTabla();//actualizamos
-                    System.out.println(Repositorio.familias.toString());//familias que estan en repo
+                    System.out.println("Familia Eliminada");//familias que estan en repo
                     JOptionPane.showMessageDialog(null, "Familia Eliminada");
                 }
 

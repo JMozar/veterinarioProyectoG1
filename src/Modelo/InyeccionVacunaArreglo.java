@@ -28,7 +28,6 @@ public class InyeccionVacunaArreglo implements InterfazArreglo{
                 inyecciones[i + 1] = null;
                 numero=i;
             }
-            //System.out.println(ClientePersonas[numero].getNombre()+" fue eliminado.");
         }else{
             System.out.println("Posicion invalida");
         }
@@ -58,7 +57,6 @@ public class InyeccionVacunaArreglo implements InterfazArreglo{
         }
         return resultado;
     }
-    
     
     @Override
     public String toString() {

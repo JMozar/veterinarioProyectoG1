@@ -10,17 +10,10 @@ public class Vacuna {
     private String dosis;
     private String gramos;
     private String fechaVacunacion;
-    private boolean recurrente;//
+    private boolean recurrente;
     private int vecesAplicadas;
-    //aplicada?
-    private boolean estado;//fue aplicada o aun no?
-    
-    //de repente se tendra clase arreglo de Vacunas
-    //constructor, get, set
-    
-    //recurrente o de una dosis
-    
-    //vacunas de una sola aplicacion
+    private boolean estado;
+
     public Vacuna (int numVacuna, String medicamentos, String dosis, String gramos, String fechaVacunacion) {
         this.numVacuna=numVacuna;
         this.medicamentos = medicamentos;

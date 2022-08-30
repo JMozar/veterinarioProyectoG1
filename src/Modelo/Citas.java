@@ -5,14 +5,12 @@ import java.util.Date;
 
 
 public class Citas {
-    //revisar lo de vacuna
-    //fecha a String
 
     private static int contador=0;
     private int codigo;
-    private String Fecha; //CAMBIAR a DATE
-    private String Diagnostico;//¿Que tiene?
-    private String Tratamiento;//Como se quita
+    private String Fecha;
+    private String Diagnostico;
+    private String Tratamiento;
     
 
     private Empleado empleado;
@@ -120,10 +118,6 @@ public class Citas {
     public float getRegistroPeso() {
         return registroPeso;
     }
-
-    
-    
-    
 
     @Override
     public String toString() {

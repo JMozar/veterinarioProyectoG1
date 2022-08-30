@@ -30,21 +30,17 @@ public class ControladorMascotasFamilia {
                         
                         Mascota m=Repositorio.mascotas.devolverMascota(Integer.parseInt(vista.txtCodMascota.getText()));
                         if(m.getDueño()==null){
-                            //modelo.agregar(m);//agregamos la mascota a la familia
-                        //f.AñadirMascotas(m);
+                            
                         modelo2.AñadirMascotas(m);
                         
-                        System.out.println("MASCOTA AGREGADA");
+                        System.out.println("Mascota Agregada a la familia");
                         JOptionPane.showMessageDialog(null, "Mascota Agregada a la familia");
                         actualizarTabla();
                         vista.txtCodMascota.setText("");
                         }else{
                             JOptionPane.showMessageDialog(null, "Esta mascota ya tiene dueño");
                         }
-                        //
-                        
-                        
-                        
+
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(null, "Digite un numero valido");
                     }
@@ -62,11 +58,11 @@ public class ControladorMascotasFamilia {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una mascota");
                 } else {
                     int valor = Integer.parseInt(vista.tblMascotasFamilia.getValueAt(fila, 0).toString());
-                    //modelo.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
+                    
                     modelo2.EliminarMascotaAsginada(valor);
                     actualizarTabla();//actualizamos
                     
-                    System.out.println(Repositorio.mascotas.toString());//familias que estan en repo
+                    System.out.println("Mascota Eliminada de la familia");
                     JOptionPane.showMessageDialog(null, "Mascota Eliminada de la familia");
                 }
 

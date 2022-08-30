@@ -33,7 +33,6 @@ public class ControladorRegistrarPersona {
                         Repositorio.personas.agregar(cp);
                         System.out.println("PERSONA AGREGADA");
                         JOptionPane.showMessageDialog(null, "Persona Agregada");
-                        JOptionPane.showMessageDialog(null, cp.toString());
                         actualizarTabla();
                         limpiarCampos();
                     } catch (Exception ex) {
@@ -48,7 +47,6 @@ public class ControladorRegistrarPersona {
         this.vista.btnCancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 ControladorPrincipal controlador = new ControladorPrincipal(Repositorio.usuario_validado, new frmPrincipal());
-                //en lugar de crear otro usuario debemos traerlo del repo
                 controlador.iniciar();
                 vista.dispose();
             }
@@ -62,10 +60,10 @@ public class ControladorRegistrarPersona {
                 if (fila == -1) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una persona");
                 } else {
-                    int valor = Integer.parseInt(vista.tblPersonasRepo.getValueAt(fila, 0).toString());//codigo de mascota
-                    Repositorio.personas.eliminar(valor);//metodo para eliminar(de un arreglo de mascotas)
+                    int valor = Integer.parseInt(vista.tblPersonasRepo.getValueAt(fila, 0).toString());//codigo 
+                    Repositorio.personas.eliminar(valor);//metodo para eliminar
                     actualizarTabla();//actualizamos
-                    System.out.println(Repositorio.personas.toString());//mascotas que estan en repo
+                    System.out.println("Persona Eliminada");
                     JOptionPane.showMessageDialog(null, "Persona Eliminada");
                 }
 
@@ -93,6 +91,5 @@ public class ControladorRegistrarPersona {
         this.vista.setVisible(true);
 
         actualizarTabla();
-        System.out.println(Repositorio.personas.toString());//personas que estan en repo
     }
 }

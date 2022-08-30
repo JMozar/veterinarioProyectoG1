@@ -12,7 +12,7 @@ public class ClienteFamilia {
     private int numeroMascotas;
 
     private ClientePersonaArreglo integrantesFamilia; //una familia esta compuesta por varias personas
-    private MascotaArreglo mascotasFamilia;//los clientes tienen varias mascotas
+    private MascotaArreglo mascotasFamilia;//las familias tienen varias mascotas
 
     //constructor
     public ClienteFamilia(int numeroIntegrantes,int numeroMascotas, String Apellido_Familia, String Num_Ctab, String Direccion, String telefono) {
@@ -30,7 +30,6 @@ public class ClienteFamilia {
         
     }
 
-    //get y set que no dependen de otros objetos
     public int getCodigo() {
         return codigo;
     }
@@ -111,32 +110,14 @@ public class ClienteFamilia {
         System.out.println(mascota.getNombre() + " es mascota de la familia " + Apellido_Familia);
     }
     //eliminar mascotas
-    public void EliminarMascotaAsginada(int indice) {//indice es el numero de la persona a eliminar
+    public void EliminarMascotaAsginada(int indice) {//indice es el numero de la mascota a eliminar
         System.out.println("Cambio en la familia "+this.Apellido_Familia+":");
         mascotasFamilia.devolverMascota(indice).setDueño(null);
         mascotasFamilia.eliminar(indice);
         
         
     }
-    
-
-    @Override
-    public String toString() {
-        return "ClienteFamilia{" +this.codigo+ " - Apellido_Familia=" + Apellido_Familia + ", Num_Ctab=" + Num_Ctab + ", Direccion=" + Direccion + ", telefono=" + telefono + '}';
-    }
-
-    public void mostrarIntegrantes() {
-        System.out.println("Los integrantes de la familia " + Apellido_Familia + " son: ");
-        System.out.println(integrantesFamilia.toString());
-        //this.integrantesFamilia.toString();
-    }
-
-    public void mostrarMascotas() {
-        System.out.println("Las mascotas de la familia : " + Apellido_Familia + "son");
-        System.out.println(mascotasFamilia.toString());
-    }
-
-    public ClientePersonaArreglo getIntegrantesFamilia() {
+        public ClientePersonaArreglo getIntegrantesFamilia() {
         return integrantesFamilia;
     }
 
@@ -152,6 +133,20 @@ public class ClienteFamilia {
         this.mascotasFamilia = mascotasFamilia;
     }
     
-    
+
+    @Override
+    public String toString() {
+        return "ClienteFamilia{" +this.codigo+ " - Apellido_Familia=" + Apellido_Familia + ", Num_Ctab=" + Num_Ctab + ", Direccion=" + Direccion + ", telefono=" + telefono + '}';
+    }
+
+    public void mostrarIntegrantes() {
+        System.out.println("Los integrantes de la familia " + Apellido_Familia + " son: ");
+        System.out.println(integrantesFamilia.toString());
+    }
+
+    public void mostrarMascotas() {
+        System.out.println("Las mascotas de la familia : " + Apellido_Familia + "son");
+        System.out.println(mascotasFamilia.toString());
+    }
 
 }

@@ -90,6 +90,5 @@ public class ControladorIntegrantesFamilia {
         this.vista.setVisible(true);
         
         actualizarTabla();
-        System.out.println(Repositorio.mascotas.toString());
     }
 }

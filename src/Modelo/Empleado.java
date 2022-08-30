@@ -48,12 +48,6 @@ public class Empleado extends Persona {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    
-    
-    @Override
-    public void validar(){
-        
-    }
 
     @Override
     public String toString() {
