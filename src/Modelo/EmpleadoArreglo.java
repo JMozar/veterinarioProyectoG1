@@ -20,12 +20,12 @@ public class EmpleadoArreglo {
     }
     
     public void eliminar(int x) {
-        int numero=0;
+        
         if (x >= 0) {
             for (int i = x; i < empleados.length - 1; i++) {
                 empleados[i] = empleados[i + 1];
                 empleados[i + 1] = null;
-                numero=i;
+                
             }
             //System.out.println(ClientePersonas[numero].getNombre()+" fue eliminado.");
         }else{

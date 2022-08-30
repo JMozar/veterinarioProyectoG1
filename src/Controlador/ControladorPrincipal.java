@@ -64,6 +64,15 @@ public class ControladorPrincipal {
                 }
             }
         );
+        
+        this.vista.btnRegistrarCita.addActionListener(new ActionListener(){
+            public void actionPerformed (ActionEvent e){
+                ControladorCita controlador = new ControladorCita (new frmCita(), Repositorio.citas);
+                controlador.iniciar();
+                vista.dispose();
+                }
+            }
+        );
 
     } 
     

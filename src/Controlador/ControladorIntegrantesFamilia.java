@@ -10,15 +10,30 @@ import javax.swing.table.DefaultTableModel;
 
 public class ControladorIntegrantesFamilia {
     private frmIntegrantesFamilia vista;
-    private ClienteFamilia modelo;
+    private ClientePersonaArreglo modelo;
     
-    public ControladorIntegrantesFamilia (frmIntegrantesFamilia vista, ClienteFamilia modelo){
+    public ControladorIntegrantesFamilia (frmIntegrantesFamilia vista, ClientePersonaArreglo modelo){
         this.vista = vista;
         this.modelo = modelo;
         
         this.vista.btnAgregar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 
+                if (vista.txtCodPersona.getText().isEmpty() ) {
+                    JOptionPane.showMessageDialog(null, "Digite un numero");
+
+                } else {
+                    
+                        ClientePersona p=Repositorio.personas.devolverPersona(Integer.parseInt(vista.txtCodPersona.getText()));
+                        //
+                        modelo.agregar(p);
+                        System.out.println("PERSONA AGREGADA");
+                        JOptionPane.showMessageDialog(null, "Persona Agregada");
+                        JOptionPane.showMessageDialog(null, p.toString());
+                        actualizarTabla();
+                    
+
+                }
             }
         }
         );
@@ -26,16 +41,16 @@ public class ControladorIntegrantesFamilia {
         this.vista.btnEliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int fila = vista.tblIntegrantesFamilia.getSelectedRow();
-                
+                ClientePersona p=Repositorio.personas.devolverPersona(Integer.parseInt(vista.txtCodPersona.getText()));
                 //eliminar
                 if (fila == -1) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una persona");
                 } else {
                     int valor = Integer.parseInt(vista.tblIntegrantesFamilia.getValueAt(fila, 0).toString());
-                    Repositorio.familias.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
+                    modelo.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
                     actualizarTabla();//actualizamos
-                    System.out.println(Repositorio.familias.toString());//familias que estan en repo
-                    JOptionPane.showMessageDialog(null, "Persona eliminada");
+                    
+                    JOptionPane.showMessageDialog(null, "Persona eliminada de la familia");
                 }
 
             }
@@ -48,12 +63,21 @@ public class ControladorIntegrantesFamilia {
             }
         }
         );
+        
+        this.vista.btnPersonasRegistradas.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ControladorPersonasRegistradas controlador = new ControladorPersonasRegistradas( new frmPersonasRegistradas(),Repositorio.personas);
+                    controlador.iniciar();
+                    
+            }
+        }
+        );
     }
     
     public void actualizarTabla() {
         //lo del jtable
-        //DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
-        //this.vista.tblIntegrantesFamilia.setModel(modelotabla);
+        DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
+        this.vista.tblIntegrantesFamilia.setModel(modelotabla);
     }
     
     public void iniciar() {

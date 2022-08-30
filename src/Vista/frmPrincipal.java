@@ -31,7 +31,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         btnMascotas = new javax.swing.JButton();
         btnPersonas = new javax.swing.JButton();
         btnEmpleados = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnRegistrarCita = new javax.swing.JButton();
         lblUsuario = new javax.swing.JLabel();
         btnInyeccion = new javax.swing.JButton();
 
@@ -45,7 +45,7 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         btnEmpleados.setText("Empleados");
 
-        jButton5.setText("Registrar CIta");
+        btnRegistrarCita.setText("Registrar CIta");
 
         lblUsuario.setText("jLabel1");
 
@@ -72,7 +72,7 @@ public class frmPrincipal extends javax.swing.JFrame {
                         .addComponent(lblUsuario)
                         .addGap(105, 105, 105))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton5)
+                        .addComponent(btnRegistrarCita)
                         .addGap(144, 144, 144))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnInyeccion)
@@ -92,7 +92,7 @@ public class frmPrincipal extends javax.swing.JFrame {
                     .addComponent(btnMascotas)
                     .addComponent(btnEmpleados))
                 .addGap(44, 44, 44)
-                .addComponent(jButton5)
+                .addComponent(btnRegistrarCita)
                 .addGap(18, 18, 18)
                 .addComponent(btnInyeccion)
                 .addContainerGap(36, Short.MAX_VALUE))
@@ -145,7 +145,7 @@ public class frmPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnInyeccion;
     public javax.swing.JButton btnMascotas;
     public javax.swing.JButton btnPersonas;
-    private javax.swing.JButton jButton5;
+    public javax.swing.JButton btnRegistrarCita;
     public javax.swing.JLabel lblUsuario;
     // End of variables declaration//GEN-END:variables
 }

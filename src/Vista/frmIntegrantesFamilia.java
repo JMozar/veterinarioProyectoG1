@@ -31,9 +31,11 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnRegresar = new javax.swing.JButton();
-        btnEliminar = new javax.swing.JButton();
+        btnPersonasRegistradas = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblIntegrantesFamilia = new javax.swing.JTable();
+        btnEliminar = new javax.swing.JButton();
+        txtCodPersona = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,7 +51,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 130, 40));
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 130, 40));
 
         btnRegresar.setText("Regresar");
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
@@ -57,15 +59,15 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
                 btnRegresarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 130, 40));
+        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 220, 40));
 
-        btnEliminar.setText("Eliminar");
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+        btnPersonasRegistradas.setText("Personas Registradas");
+        btnPersonasRegistradas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
+                btnPersonasRegistradasActionPerformed(evt);
             }
         });
-        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 130, 40));
+        jPanel2.add(btnPersonasRegistradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 170, 40));
 
         tblIntegrantesFamilia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -80,7 +82,16 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblIntegrantesFamilia);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, 370));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, 320));
+
+        btnEliminar.setText("Eliminar");
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 170, 40));
+        jPanel2.add(txtCodPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 348, 50, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 470, 470));
 
@@ -96,6 +107,10 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnPersonasRegistradasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPersonasRegistradasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPersonasRegistradasActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
@@ -140,10 +155,12 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAgregar;
     public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnPersonasRegistradas;
     public javax.swing.JButton btnRegresar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTable tblIntegrantesFamilia;
+    public javax.swing.JTextField txtCodPersona;
     // End of variables declaration//GEN-END:variables
 }

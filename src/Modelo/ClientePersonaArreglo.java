@@ -37,6 +37,18 @@ public class ClientePersonaArreglo {
         indice--;
 
     }
+    
+    public ClientePersona devolverPersona(int codigo) {
+        ClientePersona resultado = null;
+         for(int i=0; i < ClientePersonas.length; i++){
+            if( codigo==this.ClientePersonas[i].getCodigo() ) {
+                resultado = this.ClientePersonas[i];
+                break;
+            }
+        }
+        return resultado;
+    }
+    
     public String[] getCabecera() {
         return cabecera;
     }

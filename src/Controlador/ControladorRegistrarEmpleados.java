@@ -47,8 +47,7 @@ public class ControladorRegistrarEmpleados {
                 }
 
             }
-        }
-                
+        }      
         );
         this.vista.btnCancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){

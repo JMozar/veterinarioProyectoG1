@@ -44,7 +44,7 @@
                       <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnRegistrarCita" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="144" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -71,7 +71,7 @@
                   <Component id="btnEmpleados" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-              <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+              <Component id="btnRegistrarCita" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnInyeccion" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="36" max="32767" attributes="0"/>
@@ -112,10 +112,13 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="btnRegistrarCita">
       <Properties>
         <Property name="text" type="java.lang.String" value="Registrar CIta"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lblUsuario">
       <Properties>

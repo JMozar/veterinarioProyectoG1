@@ -85,11 +85,13 @@ public class ControladorFamilias {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una familia");
                 }
                 else {
-                    int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de mascota
-                    ClienteFamilia f= null;
-                    Repositorio.familias.devolverFamilia(valor);
+                    int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de familia
+                    Repositorio.familias.devolverFamilia(valor);//familia seleccionada
+                    ClienteFamilia familia= Repositorio.familias.devolverFamilia(valor);
                     
-                    f=Repositorio.familias.devolverFamilia(valor);
+                    
+                    ClientePersonaArreglo f=familia.getIntegrantesFamilia();
+                    
                     ControladorIntegrantesFamilia controladorh = new ControladorIntegrantesFamilia(new frmIntegrantesFamilia(), f);
                     controladorh.iniciar();
                 }
@@ -126,5 +128,6 @@ public class ControladorFamilias {
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
+        actualizarTabla();
     }
 }

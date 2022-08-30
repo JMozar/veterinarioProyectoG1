@@ -18,6 +18,9 @@ public class Main {
         //Añadimos familias
         ClienteFamilia familia1 = new ClienteFamilia(5,5,"Moore", "123", "Mz B", "9999999999");
         ClienteFamilia familia2 = new ClienteFamilia(5,5,"Ramos", "133", "Mz C", "9888884657");
+        Repositorio.familias.agregar(familia1);
+        Repositorio.familias.agregar(familia2);
+        
         //añadimos personas
         ClientePersona persona1 = new ClientePersona("dx","Salazar","123",978978978);
         ClientePersona persona2 = new ClientePersona("Antonio","Zeta","122",954545454);

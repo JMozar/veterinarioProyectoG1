@@ -111,6 +111,7 @@ public class ClienteFamilia {
     }
     //eliminar mascotas
     
+    
 
     @Override
     public String toString() {
@@ -127,5 +128,15 @@ public class ClienteFamilia {
         System.out.println("Las mascotas de la familia : " + Apellido_Familia + "son");
         System.out.println(mascotasFamilia.toString());
     }
+
+    public ClientePersonaArreglo getIntegrantesFamilia() {
+        return integrantesFamilia;
+    }
+
+    public void setIntegrantesFamilia(ClientePersonaArreglo integrantesFamilia) {
+        this.integrantesFamilia = integrantesFamilia;
+    }
+    
+    
 
 }
