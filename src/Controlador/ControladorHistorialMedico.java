@@ -33,6 +33,7 @@ public class ControladorHistorialMedico {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);
         this.vista.txtAreaHistorial.setEditable(false);
+        this.vista.lblNombreMascota.setText(modelo.getNombre());
         mostrarHistorial();
     }
 }

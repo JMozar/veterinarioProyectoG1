@@ -21,49 +21,40 @@ public class ControladorFamilias {
         this.vista.btnGuardarFamilia.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int numIntegrantes, numCelular, numMascotas;
-                if (vista.txtNroIntegrantes.getText().isEmpty() || vista.txtNroMascotas.getText().isEmpty() ||
-                vista.txtApellido.getText().isEmpty() || vista.txtCtaB.getText().isEmpty() || vista.txtDireccion.getText().isEmpty() || vista.txtCel.getText().isEmpty()) {
+                if (vista.txtNroIntegrantes.getText().isEmpty() || vista.txtNroMascotas.getText().isEmpty()
+                        || vista.txtApellido.getText().isEmpty() || vista.txtCtaB.getText().isEmpty() || vista.txtDireccion.getText().isEmpty() || vista.txtCel.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Complete todos los campos");
                 } else {
-                    try{
+                    try {
                         numIntegrantes = Integer.parseInt(vista.txtNroIntegrantes.getText());
-                        try{
+                        try {
                             numCelular = Integer.parseInt(vista.txtCel.getText());
-                            try{
-                                numMascotas =Integer.parseInt(vista.txtNroMascotas.getText());
-                                ClienteFamilia f = new ClienteFamilia( numIntegrantes, 
-                                numMascotas, vista.txtApellido.getText(), 
-                                vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
+                            try {
+                                numMascotas = Integer.parseInt(vista.txtNroMascotas.getText());
+                                ClienteFamilia f = new ClienteFamilia(numIntegrantes,
+                                        numMascotas, vista.txtApellido.getText(),
+                                        vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
                                 //Agregamos las familia al repo
                                 Repositorio.familias.agregar(f);
 
                                 System.out.println("FAMILIA AGREGADA");
                                 JOptionPane.showMessageDialog(null, "Familia Agregada");
-                        
+
                                 //Actualizar tabla
                                 actualizarTabla();
+                                limpiarCampos();
                                 System.out.println(Repositorio.familias.toString());//familias que estan en repo
-                        
-                                vista.txtApellido.setText("");
-                                vista.txtCtaB.setText("");
-                                vista.txtDireccion.setText("");
-                                vista.txtNroIntegrantes.setText("");
-                                vista.txtNroMascotas.setText("");
-                                vista.txtCel.setText("");
-                            
-                            }
-                            catch(NumberFormatException ex1){
+
+                            } catch (NumberFormatException ex1) {
                                 JOptionPane.showMessageDialog(null, "Número de mascotas invalido");
-                            }   
-                        }
-                        catch(NumberFormatException ex2){
+                            }
+                        } catch (NumberFormatException ex2) {
                             JOptionPane.showMessageDialog(null, "Número de celular invalido");
                         }
-                    }catch (NumberFormatException ex3) {
-                    JOptionPane.showMessageDialog(null, "Número de integrantes invalido");
+                    } catch (NumberFormatException ex3) {
+                        JOptionPane.showMessageDialog(null, "Número de integrantes invalido");
                     }
-                        
-                        
+
                 }
             }
         }
@@ -78,7 +69,7 @@ public class ControladorFamilias {
             }
         }
         );
-                
+
         this.vista.btnMascota.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
@@ -86,41 +77,41 @@ public class ControladorFamilias {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una familia");
                 } else {
                     int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de mascota
-                    Mascota f= null;
-                                        
-                    f=Repositorio.mascotas.devolverMascota(valor);
-                    ControladorMascotasFamilia controladorh = new ControladorMascotasFamilia(new frmMascotasFamilia(), f);
+                    Repositorio.familias.devolverFamilia(valor);//familia seleccionada
+                    ClienteFamilia familia = Repositorio.familias.devolverFamilia(valor);
+
+                    MascotaArreglo m = familia.getMascotasFamilia();
+
+                    ControladorMascotasFamilia controladorh = new ControladorMascotasFamilia(new frmMascotasFamilia(), m, familia);
                     controladorh.iniciar();
                 }
             }
         }
         );
-        
+
         this.vista.btnIntegrantes.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
                 if (fila == -1) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una familia");
-                }
-                else {
+                } else {
                     int valor = Integer.parseInt(vista.tblFamiliaRepo.getValueAt(fila, 0).toString());//codigo de familia
                     Repositorio.familias.devolverFamilia(valor);//familia seleccionada
-                    ClienteFamilia familia= Repositorio.familias.devolverFamilia(valor);
-                    
-                    
-                    ClientePersonaArreglo f=familia.getIntegrantesFamilia();
-                    
+                    ClienteFamilia familia = Repositorio.familias.devolverFamilia(valor);
+
+                    ClientePersonaArreglo f = familia.getIntegrantesFamilia();
+
                     ControladorIntegrantesFamilia controladorh = new ControladorIntegrantesFamilia(new frmIntegrantesFamilia(), f);
                     controladorh.iniciar();
                 }
             }
         }
         );
-        
+
         this.vista.btnEliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int fila = vista.tblFamiliaRepo.getSelectedRow();//seleccion de fila de la tabla
-                
+
                 //eliminar
                 if (fila == -1) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una familia");
@@ -136,13 +127,23 @@ public class ControladorFamilias {
         }
         );
     }
-    
+
     public void actualizarTabla() {
         //lo del jtable
         DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
         this.vista.tblFamiliaRepo.setModel(modelotabla);
     }
-    
+
+    public void limpiarCampos() {
+        vista.txtApellido.setText("");
+        vista.txtCtaB.setText("");
+        vista.txtDireccion.setText("");
+        vista.txtNroIntegrantes.setText("");
+        vista.txtNroMascotas.setText("");
+        vista.txtCel.setText("");
+
+    }
+
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);
         this.vista.setVisible(true);

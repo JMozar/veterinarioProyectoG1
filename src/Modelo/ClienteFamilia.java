@@ -25,7 +25,7 @@ public class ClienteFamilia {
         this.numeroIntegrantes = numeroIntegrantes;
         this.numeroMascotas = numeroMascotas;
         
-        this.integrantesFamilia = new ClientePersonaArreglo(numeroIntegrantes);//2
+        this.integrantesFamilia = new ClientePersonaArreglo(numeroIntegrantes);
         this.mascotasFamilia = new MascotaArreglo(numeroMascotas);
         
     }
@@ -89,6 +89,7 @@ public class ClienteFamilia {
     
     //Administrar INTEGRANTES de la familia
     //Agregar integrantes
+    
     public void AñadirPersonas(ClientePersona ClientePersona) {
         this.integrantesFamilia.agregar(ClientePersona);
         System.out.println(ClientePersona.getNombre() + " añadido(a) a la familia " + Apellido_Familia);
@@ -97,7 +98,7 @@ public class ClienteFamilia {
     //Eliminar algun integrante de la familia
     public void EliminarPersonaAsginada(int indice) {//indice es el numero de la persona a eliminar
         System.out.println("Cambio en la familia "+this.Apellido_Familia+":");
-        System.out.println(integrantesFamilia.devolverArreglo()[indice].getNombre()+" eliminado");
+
         integrantesFamilia.eliminar(indice);
         
     }
@@ -105,12 +106,18 @@ public class ClienteFamilia {
     //Administrar MASCOTAS de la familia
     //añadir mascotas
     public void AñadirMascotas(Mascota mascota) {
-        this.mascotasFamilia.agregar(mascota);
-        mascota.setDueño(this);//le damos a conocer a la mascota quien es su dueño
+        mascotasFamilia.agregar(mascota);
+        mascota.setDueño(this);
         System.out.println(mascota.getNombre() + " es mascota de la familia " + Apellido_Familia);
     }
     //eliminar mascotas
-    
+    public void EliminarMascotaAsginada(int indice) {//indice es el numero de la persona a eliminar
+        System.out.println("Cambio en la familia "+this.Apellido_Familia+":");
+        mascotasFamilia.devolverMascota(indice).setDueño(null);
+        mascotasFamilia.eliminar(indice);
+        
+        
+    }
     
 
     @Override
@@ -135,6 +142,14 @@ public class ClienteFamilia {
 
     public void setIntegrantesFamilia(ClientePersonaArreglo integrantesFamilia) {
         this.integrantesFamilia = integrantesFamilia;
+    }
+
+    public MascotaArreglo getMascotasFamilia() {
+        return mascotasFamilia;
+    }
+
+    public void setMascotasFamilia(MascotaArreglo mascotasFamilia) {
+        this.mascotasFamilia = mascotasFamilia;
     }
     
     

@@ -35,6 +35,7 @@ public class ControladorRegistrarPersona {
                         JOptionPane.showMessageDialog(null, "Persona Agregada");
                         JOptionPane.showMessageDialog(null, cp.toString());
                         actualizarTabla();
+                        limpiarCampos();
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(null, "Digite un num. celular valido");
                     }
@@ -77,6 +78,14 @@ public class ControladorRegistrarPersona {
         //lo del jtable
         DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
         this.vista.tblPersonasRepo.setModel(modelotabla);
+    }
+    public void limpiarCampos(){
+        //fecha talla peso diagnostico tratamiento
+        this.vista.lblNombrePersona.setText("");
+        this.vista.lblApellidoPersona.setText("");
+        this.vista.lblDNIPersona.setText("");
+        this.vista.lblTelefonoPersona.setText("");       
+        
     }
 
     public void iniciar() {

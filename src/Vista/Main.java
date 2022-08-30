@@ -50,14 +50,14 @@ public class Main {
         //agregamos las personas al arreglo de personas
         
         
-        familia1.AñadirPersonas(persona1);
+        //familia1.AñadirPersonas(persona1);
         //persona1.AñadirFamilias(familia1);
         
        
-        familia1.AñadirPersonas(persona2);
+        //familia1.AñadirPersonas(persona2);
         //persona2.AñadirFamilias(familia1);
         
-        familia2.AñadirPersonas(persona1);
+        //familia2.AñadirPersonas(persona1);
         //persona1.AñadirFamilias(familia2);
         
         familia1.mostrarIntegrantes();
@@ -71,12 +71,15 @@ public class Main {
         //System.out.println(mascota1.getDueño());
         
         System.out.println("");
+        
         familia1.AñadirMascotas(mascota1);
+        //familia1.getMascotasFamilia().agregar(mascota1);
         
         familia1.mostrarMascotas();
         
         System.out.println("");
         familia2.AñadirMascotas(mascota2);
+        //familia2.getMascotasFamilia().agregar(mascota2);
         familia2.mostrarMascotas();
         System.out.println("");
         //mascota1.setDueño(familia1);
@@ -140,23 +143,14 @@ public class Main {
         
         //familia1.EliminarPersonaAsginada(1);
         
-        familia1.EliminarPersonaAsginada(0);
+        //familia1.EliminarPersonaAsginada(0);
         
         //persona1.MostrarfamiliasAsignadas();
         System.out.println("");
         
         familia1.mostrarIntegrantes();
-        /*
-        System.out.println("Prueba Calendarios");
-        System.out.println("");
-        Especie especie1 = new Especie("Perro");
-        Especie especie2 = new Especie("Gato");
-        
-        CalendarioVacuna calPerro = new CalendarioVacuna(especie1);
-        CalendarioVacuna calGato = new CalendarioVacuna(especie2);
-        calPerro.mostrarCalendario();System.out.println("");
-        calGato.mostrarCalendario();
-        */
+  
+ 
     }
 }
     

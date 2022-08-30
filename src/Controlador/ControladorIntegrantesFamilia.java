@@ -12,6 +12,7 @@ public class ControladorIntegrantesFamilia {
     private frmIntegrantesFamilia vista;
     private ClientePersonaArreglo modelo;
     
+    
     public ControladorIntegrantesFamilia (frmIntegrantesFamilia vista, ClientePersonaArreglo modelo){
         this.vista = vista;
         this.modelo = modelo;
@@ -23,15 +24,19 @@ public class ControladorIntegrantesFamilia {
                     JOptionPane.showMessageDialog(null, "Digite un numero");
 
                 } else {
-                    
+                    try {
                         ClientePersona p=Repositorio.personas.devolverPersona(Integer.parseInt(vista.txtCodPersona.getText()));
                         //
                         modelo.agregar(p);
                         System.out.println("PERSONA AGREGADA");
-                        JOptionPane.showMessageDialog(null, "Persona Agregada");
+                        JOptionPane.showMessageDialog(null, "Persona Agregada a la familia");
                         actualizarTabla();
                         
                         vista.txtCodPersona.setText("");
+                    } catch (Exception ex) {
+                        JOptionPane.showMessageDialog(null, "Digite un numero valido");
+                    }
+                        
 
                 }
             }
@@ -41,11 +46,12 @@ public class ControladorIntegrantesFamilia {
         this.vista.btnEliminar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int fila = vista.tblIntegrantesFamilia.getSelectedRow();
-                ClientePersona p=Repositorio.personas.devolverPersona(Integer.parseInt(vista.txtCodPersona.getText()));
+                
                 //eliminar
                 if (fila == -1) {
                     JOptionPane.showMessageDialog(null, "Debe seleccionar una persona");
                 } else {
+                    
                     int valor = Integer.parseInt(vista.tblIntegrantesFamilia.getValueAt(fila, 0).toString());
                     modelo.eliminar(valor);//metodo para eliminar(de un arreglo de familias)
                     actualizarTabla();//actualizamos

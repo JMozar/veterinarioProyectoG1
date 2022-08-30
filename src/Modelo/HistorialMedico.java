@@ -5,16 +5,15 @@ package Modelo;
 public class HistorialMedico {
 
     private Mascota mascota;
-    private ClienteFamilia dueño;
+    
     private CitasArreglo citas;//arreglo de citas
     private InyeccionVacunaArreglo inyecciones;//areglo de inyecciones
     
     //agregar citas
     //mostrar citas de un paciente
 
-    public HistorialMedico (Mascota mascota, ClienteFamilia dueño) {
+    public HistorialMedico (Mascota mascota) {
         this.mascota = mascota;
-        this.dueño = dueño;
         this.citas = new CitasArreglo(5);
         this.inyecciones = new InyeccionVacunaArreglo(5);
     }
@@ -27,7 +26,14 @@ public class HistorialMedico {
     }
 
     public String mostrarHistorial(){
-        return  "El dueño de esta mascota es la familia : "+mascota.getDueño().getApellido_Familia()+"\n"+
+        String texto="";
+        if(mascota.getDueño()==null){
+            texto="Esta mascota no tiene dueño"+"\n";
+            
+        }else{
+            texto="El dueño de esta mascota es la familia : "+mascota.getDueño().getApellido_Familia()+"\n";
+        }
+        return  texto+
                 "--------------------------------------------------------------------------"+"\n"+
                 mostrarCitasRegistradas()+
                 "--------------------------------------------------------------------------"+"\n"+

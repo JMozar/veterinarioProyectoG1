@@ -38,6 +38,7 @@ public class ControladorRegistrarEmpleados {
                             JOptionPane.showMessageDialog(null, "Empleado Agregada");
                             JOptionPane.showMessageDialog(null, em.toString());
                             actualizarTabla();
+                            limpiarCampos();
                         } catch (NumberFormatException ex1) {
                             JOptionPane.showMessageDialog(null, "Sueldo invalido");
                         }
@@ -82,6 +83,15 @@ public class ControladorRegistrarEmpleados {
         //lo del jtable
         DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
         this.vista.tblEmpleadoRepo.setModel(modelotabla);
+    }
+    public void limpiarCampos(){
+        //fecha talla peso diagnostico tratamiento
+        this.vista.txtNombreEmpleado.setText("");
+        this.vista.txtApellidoEmpleado.setText("");
+        this.vista.txtDNIEmpleado.setText("");
+        this.vista.lblTelefonoEmpleado.setText("");
+        this.vista.txtEspecialidad.setText("");
+        this.vista.txtSueldo.setText("");
     }
     public void iniciar() {
         this.vista.setLocationRelativeTo(null);

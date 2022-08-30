@@ -5,6 +5,8 @@ package Modelo;
 public class CitasArreglo {
     private Citas[] citas;
     private int indice;
+    private final String[] cabecera =  {"CODIGO",
+                            "FECHA","DIAG.","TRAT","MASCOTA", "EMPLEADO","TALLA","PESO"};
     
     public CitasArreglo (int tamano) {
         this.citas = new Citas[tamano];
@@ -31,7 +33,29 @@ public class CitasArreglo {
         indice--;
 
     }
-    
+    public String[] getCabecera() {
+        return cabecera;
+    }
+    public boolean isVacio() {
+        return this.indice==0;
+    }
+    public Object[][] getDatos(){
+        Object resultado[][] = new Object[this.indice][8];
+        if(!isVacio()){
+            for(int indice = 0; indice< this.indice;indice++){
+                resultado[indice][0] = this.citas[indice].getCodigo();
+                resultado[indice][1] = this.citas[indice].getFecha();
+                resultado[indice][2] = this.citas[indice].getDiagnostico();
+                resultado[indice][3] = this.citas[indice].getTratamiento();
+                resultado[indice][4] = this.citas[indice].getMascota().getNombre();
+                resultado[indice][5] = this.citas[indice].getEmpleado().getNombre();
+                resultado[indice][6] = this.citas[indice].getRegistroTalla();
+                resultado[indice][7] = this.citas[indice].getRegistroPeso();
+                
+            }
+        }
+        return resultado;
+    }
     
     @Override
     public String toString() {

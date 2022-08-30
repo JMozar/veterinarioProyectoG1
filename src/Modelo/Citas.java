@@ -33,8 +33,8 @@ public class Citas {
         
         modificarPesoMascota(peso);
         modificarTallaMascota(talla);
-        registroTalla=peso;
-        registroPeso=talla;
+        this.registroTalla=talla;
+        this.registroPeso=peso;
         
         
     }
@@ -80,6 +80,50 @@ public class Citas {
         }
         
     }
+
+    public String getDiagnostico() {
+        return Diagnostico;
+    }
+
+    public void setDiagnostico(String Diagnostico) {
+        this.Diagnostico = Diagnostico;
+    }
+
+    public String getTratamiento() {
+        return Tratamiento;
+    }
+
+    public void setTratamiento(String Tratamiento) {
+        this.Tratamiento = Tratamiento;
+    }
+
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
+    }
+
+    public Mascota getMascota() {
+        return mascota;
+    }
+
+    public void setMascota(Mascota mascota) {
+        this.mascota = mascota;
+    }
+
+    public float getRegistroTalla() {
+        return registroTalla;
+    }
+
+    public float getRegistroPeso() {
+        return registroPeso;
+    }
+
+    
+    
+    
 
     @Override
     public String toString() {

@@ -42,6 +42,7 @@ public class ControladorMascota {
                     JOptionPane.showMessageDialog(null, m.toString());
                     //Actualizar tabla
                     actualizarTabla();
+                    limpiarCampos();
                     System.out.println(Repositorio.mascotas.toString());//mascotas que estan en repo
                 }
             }
@@ -101,6 +102,15 @@ public class ControladorMascota {
         //lo del jtable
         DefaultTableModel modelotabla = new DefaultTableModel(this.modelo.getDatos(), this.modelo.getCabecera());
         this.vista.tblMascotasRepo.setModel(modelotabla);
+    }
+    public void limpiarCampos(){
+        //fecha talla peso diagnostico tratamiento
+        this.vista.txtNombreMascota.setText("");
+        this.vista.txtRazaMascota.setText("");
+        this.vista.txtFechaNacimientoMascota.setText("");
+        this.vista.txtColorMascota.setText("");
+        this.vista.txtColorMascota.setText("");
+        
     }
 
     public void iniciar() {

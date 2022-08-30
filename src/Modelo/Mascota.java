@@ -27,7 +27,7 @@ public class Mascota {
         this.raza=raza;
         this.colorPelo=colorPelo;
         this.fechaNacimiento=fechaNacimiento;
-        this.HistorialMascota=new HistorialMedico(this,dueño);
+        this.HistorialMascota=new HistorialMedico(this);
         this.vacunasDesignadas= new CalendarioVacuna(especie);
     }
 
@@ -52,11 +52,7 @@ public class Mascota {
     public String mostrarVacunas(){
         return vacunasDesignadas.CalendarioVacunas();
     }
-    /*
-    public void vacunar(int numeroVacuna){//el numero de la vacuna que deseas colocar
-        vacunasDesignadas.devolverVacunasDesignadas()[numeroVacuna].setEstado(true);
-    }
-    */
+
     public void vacunar(int numeroVacuna){//el numero de la vacuna que deseas colocar
         if(vacunasDesignadas.devolverVacunas()[numeroVacuna].isRecurrente()==false){
             vacunasDesignadas.devolverVacunas()[numeroVacuna].setEstado(true);
@@ -66,10 +62,6 @@ public class Mascota {
         
     }
     
-    //añadir metodos(añadir, eliminar, ) o busquen p
-    //validar codigo que sea numero o que se aumente automticamente
-    //saberedad de mascota en meses
-
     public int getCodigo() {
         return codigo;
     }
@@ -107,8 +99,6 @@ public class Mascota {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    //get y set de talla y peso que sera modificado en cada cita
 
     public float getTalla() {
         return talla;
@@ -148,7 +138,7 @@ public class Mascota {
         return nombre;
     }
     
-    //return "Mascota{" + "especie=" + especie + ", codigo=" + codigo + ", nombre=" + nombre + ", talla=" + talla + ", peso=" + peso + '}';
+    
     
     
     
