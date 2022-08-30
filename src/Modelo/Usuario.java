@@ -1,7 +1,9 @@
 
 package Modelo;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable{
     
     //Cambien las variables     
     private String Usuario;

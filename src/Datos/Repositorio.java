@@ -10,8 +10,10 @@ import Modelo.MascotaArreglo;
 import Modelo.CitasArreglo;
 import Modelo.Usuario;
 import Modelo.UsuarioArreglo;
+import java.io.Serializable;
 
-public class Repositorio {
+public class Repositorio implements Serializable{
+    
     public static UsuarioArreglo usuarios = new UsuarioArreglo(3);
     public static Usuario usuario_validado;
     public static MascotaArreglo mascotas = new MascotaArreglo(10);

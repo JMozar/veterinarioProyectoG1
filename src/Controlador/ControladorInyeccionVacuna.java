@@ -40,7 +40,7 @@ public class ControladorInyeccionVacuna {
 
                             //Agregamos las mascotas al repo
                             m.vacunar(numVacuna - 1);//con esto se cambia el estado de la vacuna seleccionada
-
+                            m.registrarInyeccionHistorial(i);
                             Repositorio.inyecciones.agregar(i);
 
                             System.out.println("Inyeccion AGREGADA");

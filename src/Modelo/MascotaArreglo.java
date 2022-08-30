@@ -2,6 +2,7 @@
 package Modelo;
 
 import Interfaces.InterfazArreglo;
+import java.io.Serializable;
 
 public class MascotaArreglo implements InterfazArreglo{
     private Mascota[] mascotas;

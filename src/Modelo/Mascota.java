@@ -1,6 +1,6 @@
 package Modelo;
 
-import java.util.Date;
+import java.io.Serializable;
 
 public class Mascota {
     private Especie especie;

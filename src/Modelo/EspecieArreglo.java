@@ -1,8 +1,10 @@
 
 package Modelo;
 
+import java.io.Serializable;
 
-public class EspecieArreglo {
+
+public class EspecieArreglo implements Serializable{
     private Especie[] especies;
     private int indice;
 

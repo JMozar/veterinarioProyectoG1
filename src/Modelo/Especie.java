@@ -1,8 +1,8 @@
 package Modelo;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public class Especie{
+public class Especie implements Serializable{
     
     private String nombreEspecie;
 
