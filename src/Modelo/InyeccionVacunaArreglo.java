@@ -1,8 +1,10 @@
 
 package Modelo;
 
+import Interfaces.InterfazArreglo;
 
-public class InyeccionVacunaArreglo {
+
+public class InyeccionVacunaArreglo implements InterfazArreglo{
     private InyeccionVacuna[] inyecciones;
     private int indice;
     private final String[] cabecera =  {"CODIGO",
@@ -33,12 +35,15 @@ public class InyeccionVacunaArreglo {
         indice--;
 
     }
+    @Override
     public String[] getCabecera() {
         return cabecera;
     }
+    @Override
     public boolean isVacio() {
         return this.indice==0;
     }
+    @Override
     public Object[][] getDatos(){
         Object resultado[][] = new Object[this.indice][5];
         if(!isVacio()){

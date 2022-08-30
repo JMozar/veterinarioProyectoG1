@@ -60,7 +60,8 @@ public class ControladorCita {
         this.vista.botonRegresar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                ControladorPrincipal controlador = new ControladorPrincipal(new Usuario("admin", "123"), new frmPrincipal());
+                ControladorPrincipal controlador = new ControladorPrincipal(Repositorio.usuario_validado, new frmPrincipal());
+                
                 controlador.iniciar();
                 vista.dispose();
             }

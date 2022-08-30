@@ -1,8 +1,10 @@
 
 package Modelo;
 
+import Interfaces.InterfazArreglo;
 
-public class EmpleadoArreglo {
+
+public class EmpleadoArreglo implements InterfazArreglo{
     private Empleado[] empleados;
     private int indice;
     private final String[] cabecera =  {"CODIGO","NOMBRE",
@@ -36,16 +38,17 @@ public class EmpleadoArreglo {
     }
     
     //Necesario para mostrar datos en tabla
+    @Override
     public String[] getCabecera() {
         return cabecera;
     }
     
+    @Override
     public boolean isVacio() {
         return this.indice==0;
     }
-    
-    
-    
+   
+    @Override
     public Object[][] getDatos(){
         Object resultado[][] = new Object[this.indice][7];
         if(!isVacio()){
@@ -74,17 +77,11 @@ public class EmpleadoArreglo {
         }
         return resultado;
     }
-    public boolean vacio(){
-        if(this.indice==0){
-            return true;
-        }else{
-            return false;
-        }
-    }
+    
     
     public Empleado[] getDatosCombo() {
         Empleado resultado[] = null;
-        if (!vacio()) {
+        if (!isVacio()) {
             resultado = new Empleado[this.indice];
             for (int i = 0; i < this.indice; i++) {
                 resultado[i] = this.empleados[i];

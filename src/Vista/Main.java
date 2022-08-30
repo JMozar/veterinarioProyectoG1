@@ -11,10 +11,17 @@ import Controlador.*;
 public class Main {
     public static void main(String[] args) {
         
+        //usuarios
+        Repositorio.usuarios.agregar(new Usuario("abc","123"));
+        Repositorio.usuarios.agregar(new Usuario("Gerente","123"));
         //Prueba
         //Creamos especies
         Especie especie1 = new Especie("Perro");
         Especie especie2 = new Especie("Gato");
+                
+        Repositorio.especies.agregar(especie1);
+        Repositorio.especies.agregar(especie2);
+        
         //Añadimos familias
         ClienteFamilia familia1 = new ClienteFamilia(5,5,"Moore", "123", "Mz B", "9999999999");
         ClienteFamilia familia2 = new ClienteFamilia(5,5,"Ramos", "133", "Mz C", "9888884657");
@@ -28,37 +35,18 @@ public class Main {
         Repositorio.personas.agregar(persona2);
         //Creamos empleados
         Empleado empleado1= new Empleado("Veterinario",1200, "Juan", "Perez", "88888888", 912345678);
-        Repositorio.empleados.agregar(empleado1);//si no hay empleados sale error
+        Repositorio.empleados.agregar(empleado1);
         //añadimos mascotas
         Mascota mascota1 = new Mascota("Peque",especie1,"chiwawa","Mostaza","12-08-2018");
         Mascota mascota2 = new Mascota("Michi",especie2,"unica","Mostaza","12-08-2018");
-        
-        //REPOSITORIO
         Repositorio.mascotas.agregar(mascota1);//mascota 0
         Repositorio.mascotas.agregar(mascota2);//mascota 1
+      
         
-        Repositorio.especies.agregar(especie1);
-        Repositorio.especies.agregar(especie2);
+        //inicio de controlador Sistema(Login)
         
-        Usuario user = new Usuario("admin","123");
-        
-        //inicio de controlador menu
-        ControladorPrincipal controlador = new ControladorPrincipal( user, new frmPrincipal() );
+        ControladorSistema controlador = new ControladorSistema( Repositorio.usuarios, new frmSistema() );
         controlador.iniciar();
-        
-        
-        //agregamos las personas al arreglo de personas
-        
-        
-        //familia1.AñadirPersonas(persona1);
-        //persona1.AñadirFamilias(familia1);
-        
-       
-        //familia1.AñadirPersonas(persona2);
-        //persona2.AñadirFamilias(familia1);
-        
-        //familia2.AñadirPersonas(persona1);
-        //persona1.AñadirFamilias(familia2);
         
         familia1.mostrarIntegrantes();
         

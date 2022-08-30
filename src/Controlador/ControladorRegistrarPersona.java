@@ -47,7 +47,7 @@ public class ControladorRegistrarPersona {
         );
         this.vista.btnCancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                ControladorPrincipal controlador = new ControladorPrincipal(new Usuario("admin", "123"), new frmPrincipal());
+                ControladorPrincipal controlador = new ControladorPrincipal(Repositorio.usuario_validado, new frmPrincipal());
                 //en lugar de crear otro usuario debemos traerlo del repo
                 controlador.iniciar();
                 vista.dispose();

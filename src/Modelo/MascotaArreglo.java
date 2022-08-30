@@ -1,8 +1,9 @@
 
 package Modelo;
 
+import Interfaces.InterfazArreglo;
 
-public class MascotaArreglo {
+public class MascotaArreglo implements InterfazArreglo{
     private Mascota[] mascotas;
     private int indice;
     private final String[] cabecera =  {"CODIGO","NOMBRE",
@@ -36,16 +37,17 @@ public class MascotaArreglo {
     }
     
     //Necesario para mostrar datos en tabla
+    @Override
     public String[] getCabecera() {
         return cabecera;
     }
     
+    @Override
     public boolean isVacio() {
         return this.indice==0;
     }
-    
-    
-    
+      
+    @Override
     public Object[][] getDatos(){
         Object resultado[][] = new Object[this.indice][8];
         if(!isVacio()){

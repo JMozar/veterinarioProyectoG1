@@ -8,8 +8,12 @@ import Modelo.EspecieArreglo;
 import Modelo.InyeccionVacunaArreglo;
 import Modelo.MascotaArreglo;
 import Modelo.CitasArreglo;
+import Modelo.Usuario;
+import Modelo.UsuarioArreglo;
 
 public class Repositorio {
+    public static UsuarioArreglo usuarios = new UsuarioArreglo(3);
+    public static Usuario usuario_validado;
     public static MascotaArreglo mascotas = new MascotaArreglo(10);
     public static ClienteFamiliaArreglo familias = new ClienteFamiliaArreglo(5);
     public static ClientePersonaArreglo personas = new ClientePersonaArreglo(5);

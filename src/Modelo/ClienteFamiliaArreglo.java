@@ -1,8 +1,10 @@
 
 package Modelo;
 
+import Interfaces.InterfazArreglo;
 
-public class ClienteFamiliaArreglo {
+
+public class ClienteFamiliaArreglo implements InterfazArreglo{
     private ClienteFamilia[] ClienteFamilia;
     private int indice;
     private final String[] cabecera =  {"CODIGO","APELLIDO FAMILIA","NRO CUENTA BANCARIA",
@@ -38,14 +40,17 @@ public class ClienteFamiliaArreglo {
         return this.ClienteFamilia;
     }
     
+    @Override
     public String[] getCabecera() {
         return cabecera;
     }
     
+    @Override
     public boolean isVacio() {
         return this.indice==0;
     }
     
+    @Override
     public Object[][] getDatos(){
         Object resultado[][] = new Object[this.indice][8];
         if(!isVacio()){
@@ -71,14 +76,6 @@ public class ClienteFamiliaArreglo {
             }
         }
         return resultado;
-    }
-    //para el combobox de familia
-    public boolean vacio(){
-        if(this.indice==0){
-            return true;
-        }else{
-            return false;
-        }
     }
     
     

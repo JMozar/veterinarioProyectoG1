@@ -1,7 +1,8 @@
 package Modelo;
 
-//relacion unidireccional
-public class ClientePersonaArreglo {
+import Interfaces.InterfazArreglo;
+
+public class ClientePersonaArreglo implements InterfazArreglo{
 
     private ClientePersona[] ClientePersonas;
     private int indice;
@@ -49,16 +50,17 @@ public class ClientePersonaArreglo {
         return resultado;
     }
     
+    @Override
     public String[] getCabecera() {
         return cabecera;
     }
     
+    @Override
     public boolean isVacio() {
         return this.indice==0;
     }
     
-    
-    
+    @Override
     public Object[][] getDatos(){
         Object resultado[][] = new Object[this.indice][7];
         if(!isVacio()){

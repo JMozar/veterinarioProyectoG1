@@ -22,6 +22,15 @@ public class Usuario {
         return Estado;
     }
 
+    public String getClave() {
+        return Clave;
+    }
+
+    public void setClave(String Clave) {
+        this.Clave = Clave;
+    }
+    
+
     public boolean ingresar(String user, String password){
         boolean result = false;
         if( this.Usuario.equalsIgnoreCase(user) && 
