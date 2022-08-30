@@ -35,6 +35,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblIntegrantesFamilia = new javax.swing.JTable();
         btnEliminar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         txtCodPersona = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,7 +52,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 130, 40));
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 110, 40));
 
         btnRegresar.setText("Regresar");
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
@@ -59,15 +60,15 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
                 btnRegresarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 220, 40));
+        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 90, 40));
 
-        btnPersonasRegistradas.setText("Personas Registradas");
+        btnPersonasRegistradas.setText("Ver Personas Registradas");
         btnPersonasRegistradas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPersonasRegistradasActionPerformed(evt);
             }
         });
-        jPanel2.add(btnPersonasRegistradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 170, 40));
+        jPanel2.add(btnPersonasRegistradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 190, 20));
 
         tblIntegrantesFamilia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -90,12 +91,17 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
                 btnEliminarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 170, 40));
-        jPanel2.add(txtCodPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 348, 50, 40));
+        jPanel2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 430, 110, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 470, 470));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel1.setText("Digite el código:");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 120, 40));
+        jPanel2.add(txtCodPersona, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 60, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 520));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 470, 490));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -157,6 +163,7 @@ public class frmIntegrantesFamilia extends javax.swing.JFrame {
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnPersonasRegistradas;
     public javax.swing.JButton btnRegresar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;

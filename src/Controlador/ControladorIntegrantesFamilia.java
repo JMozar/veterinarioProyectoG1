@@ -29,9 +29,9 @@ public class ControladorIntegrantesFamilia {
                         modelo.agregar(p);
                         System.out.println("PERSONA AGREGADA");
                         JOptionPane.showMessageDialog(null, "Persona Agregada");
-                        JOptionPane.showMessageDialog(null, p.toString());
                         actualizarTabla();
-                    
+                        
+                        vista.txtCodPersona.setText("");
 
                 }
             }
@@ -67,8 +67,7 @@ public class ControladorIntegrantesFamilia {
         this.vista.btnPersonasRegistradas.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 ControladorPersonasRegistradas controlador = new ControladorPersonasRegistradas( new frmPersonasRegistradas(),Repositorio.personas);
-                    controlador.iniciar();
-                    
+                controlador.iniciar();
             }
         }
         );

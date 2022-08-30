@@ -20,32 +20,50 @@ public class ControladorFamilias {
 
         this.vista.btnGuardarFamilia.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                int numIntegrantes;
+                int numIntegrantes, numCelular, numMascotas;
                 if (vista.txtNroIntegrantes.getText().isEmpty() || vista.txtNroMascotas.getText().isEmpty() ||
                 vista.txtApellido.getText().isEmpty() || vista.txtCtaB.getText().isEmpty() || vista.txtDireccion.getText().isEmpty() || vista.txtCel.getText().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Complete todos los campos");
                 } else {
+                    try{
                         numIntegrantes = Integer.parseInt(vista.txtNroIntegrantes.getText());
-                        ClienteFamilia f = new ClienteFamilia( numIntegrantes, 
-                        Integer.parseInt(vista.txtNroMascotas.getText()), vista.txtApellido.getText(), 
-                        vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
-                        //Agregamos las familia al repo
-                        Repositorio.familias.agregar(f);
+                        try{
+                            numCelular = Integer.parseInt(vista.txtCel.getText());
+                            try{
+                                numMascotas =Integer.parseInt(vista.txtNroMascotas.getText());
+                                ClienteFamilia f = new ClienteFamilia( numIntegrantes, 
+                                numMascotas, vista.txtApellido.getText(), 
+                                vista.txtCtaB.getText(), vista.txtDireccion.getText(), vista.txtCel.getText());
+                                //Agregamos las familia al repo
+                                Repositorio.familias.agregar(f);
 
-                        System.out.println("FAMILIA AGREGADA");
-                        JOptionPane.showMessageDialog(null, "Familia Agregada");
+                                System.out.println("FAMILIA AGREGADA");
+                                JOptionPane.showMessageDialog(null, "Familia Agregada");
                         
-                        //Actualizar tabla
-                        actualizarTabla();
-                        System.out.println(Repositorio.familias.toString());//familias que estan en repo
+                                //Actualizar tabla
+                                actualizarTabla();
+                                System.out.println(Repositorio.familias.toString());//familias que estan en repo
                         
-                        vista.txtApellido.setText("");
-                        vista.txtCtaB.setText("");
-                        vista.txtDireccion.setText("");
-                        vista.txtNroIntegrantes.setText("");
-                        vista.txtNroMascotas.setText("");
-                        vista.txtCel.setText("");
-                                       
+                                vista.txtApellido.setText("");
+                                vista.txtCtaB.setText("");
+                                vista.txtDireccion.setText("");
+                                vista.txtNroIntegrantes.setText("");
+                                vista.txtNroMascotas.setText("");
+                                vista.txtCel.setText("");
+                            
+                            }
+                            catch(NumberFormatException ex1){
+                                JOptionPane.showMessageDialog(null, "Número de mascotas invalido");
+                            }   
+                        }
+                        catch(NumberFormatException ex2){
+                            JOptionPane.showMessageDialog(null, "Número de celular invalido");
+                        }
+                    }catch (NumberFormatException ex3) {
+                    JOptionPane.showMessageDialog(null, "Número de integrantes invalido");
+                    }
+                        
+                        
                 }
             }
         }
